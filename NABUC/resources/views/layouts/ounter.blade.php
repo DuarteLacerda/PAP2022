@@ -34,10 +34,10 @@
           </button>
         </div>
         <div>
-          <a class="navbar-brand brand-logo" href="index.html">
+          <a class="navbar-brand brand-logo" href="/dashboard">
             <img src="images/logo.svg" alt="logo" />
           </a>
-          <a class="navbar-brand brand-logo-mini" href="index.html">
+          <a class="navbar-brand brand-logo-mini" href="/dashboard">
             <img src="images/logo-mini.svg" alt="logo" />
           </a>
         </div>
@@ -189,14 +189,14 @@
                 <p class="mb-1 mt-3 font-weight-semibold">Duarte Lacerda</p>
                 <p class="fw-light text-muted mb-0">duartelacerda4@gmail.com</p>
               </div>
-              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My
-                Profile <span class="badge badge-pill badge-danger">1</span></a>
-              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-message-text-outline text-primary me-2"></i>
-                Messages</a>
-              <a class="dropdown-item"><i
-                  class="dropdown-item-icon mdi mdi-calendar-check-outline text-primary me-2"></i> Activity</a>
-              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-help-circle-outline text-primary me-2"></i>
-                FAQ</a>
+                {{-- <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My
+                    Profile <span class="badge badge-pill badge-danger">1</span></a>
+                <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-message-text-outline text-primary me-2"></i>
+                    Messages</a>
+                <a class="dropdown-item"><i
+                    class="dropdown-item-icon mdi mdi-calendar-check-outline text-primary me-2"></i> Activity</a>
+                <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-help-circle-outline text-primary me-2"></i>
+                    FAQ</a> --}}
               <a href="{{ Auth::logout(); }}" class="dropdown-item"><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</a>
             </div>
           </li>
@@ -390,28 +390,27 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="/dashboard">
               <i class="mdi mdi-grid-large menu-icon"></i>
               <span class="menu-title">Dashboard</span>
             </a>
           </li>
-          <li class="nav-item nav-category">UI Elements</li>
+          <li class="nav-item nav-category">Catalogo</li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
               aria-controls="ui-basic">
               <i class="menu-icon mdi mdi-floor-plan"></i>
-              <span class="menu-title">UI Elements</span>
+              <span class="menu-title">Grutas</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">Adicionar</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">Listar</a></li>
               </ul>
             </div>
           </li>
-          <li class="nav-item nav-category">Forms and Datas</li>
+          {{-- <li class="nav-item nav-category">Forms and Datas</li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false"
               aria-controls="form-elements">
@@ -480,7 +479,7 @@
               <i class="menu-icon mdi mdi-file-document"></i>
               <span class="menu-title">Documentation</span>
             </a>
-          </li>
+          </li> --}}
         </ul>
       </nav>
       <!-- partial -->
