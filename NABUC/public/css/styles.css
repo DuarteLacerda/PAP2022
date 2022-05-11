@@ -7,3 +7,93 @@
 .logo {
     width: 20%;
 }
+
+.desc-about {
+    margin: 25px;
+    width: 500px;
+    text-align: left;
+}
+
+.img-cave1 {
+    width: 45%;
+    text-align: right;
+    float: right;
+    margin: 55px;
+}
+
+.desc2-about {
+    width: 850px;
+    text-align: left;
+}
+
+#more {
+    display: none;
+}
+
+.desc1-espel {
+    margin: 15px;
+    text-align: right;
+    width: 500px;
+    float: right;
+}
+
+.desc2-espel {
+    margin: 15px;
+    width: 500px;
+    float: left;
+}
+
+.desc3-espel {
+    margin: 15px;
+    text-align: right;
+    width: 500px;
+    float: right;
+}
+
+.desc4-espel {
+    margin: 15px;
+    width: 500px;
+    float: left;
+}
+
+.titulo1-espel {
+    color: rgb(255, 183, 0);
+    text-align: center;
+}
+
+.titulo2-espel {
+    color: rgb(255, 183, 0);
+    text-align: center;
+}
+
+.titulo3-espel {
+    color: rgb(255, 183, 0);
+    text-align: center;
+}
+
+.titulo4-espel {
+    color: rgb(255, 183, 0);
+    text-align: center;
+}
+
+.logo-espel {
+    float: left;
+    margin: 35px;
+}
+
+.titulo-rescue {
+    color: rgb(255, 183, 0);
+    text-align: center;
+}
+
+.desc-rescue {
+    text-align: left;
+    width: 850px;
+    margin-top: 35px;
+    float: left;
+}
+
+.img-rescue {
+    width: 20%;
+    float: right;
+}
