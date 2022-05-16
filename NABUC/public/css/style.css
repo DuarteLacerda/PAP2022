@@ -607,7 +607,7 @@ a:active {
 }
 
 .container {
-    max-width: 1170px;
+    max-width: 1500px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -643,7 +643,7 @@ a:active {
 }
 
 .top-header-block {
-    margin-right: 4.5rem;
+    margin-right: 2.5rem;
 }
 
 .top-header-right {
@@ -728,10 +728,9 @@ ul>li {
 .menu-list>li>.sub-menu::before {
     position: absolute;
     content: "";
-    border: 1px solid #1f4271;
     top: 0;
-    width: 35%;
-    left: 3%;
+    width: auto;
+    left: auto;
     cursor: pointer;
 }
 

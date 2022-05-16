@@ -4,20 +4,20 @@
 <head>
     <title>NABUC</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/all.css">
-    <link rel="stylesheet" type="text/css" href="css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="css/lightbox.css">
-    <link rel="stylesheet" type="text/css" href="css/flexslider.css">
-    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="css/owl.theme.default.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.rateyo.css" />
-    <link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css" />
-    <link rel="stylesheet" type="text/css" href="css/meanmenu.min.css">
-    <link rel="stylesheet" type="text/css" href="css/inner-page-style.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightbox.css">
+    <link rel="stylesheet" type="text/css" href="/css/flexslider.css">
+    <link rel="stylesheet" type="text/css" href="/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="/css/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="/css/jquery.rateyo.css" />
+    <link rel="stylesheet" type="text/css" href="/css/jquery.mmenu.all.css" />
+    <link rel="stylesheet" type="text/css" href="/css/meanmenu.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/inner-page-style.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="/image/x-icon">
 </head>
 
 <body>
@@ -27,46 +27,30 @@
                 <div class="container">
                     <div class="top-header-left">
                         <div class="top-header-block">
-                            <a href="mailto:info@educationpro.com" itemprop="email"><i
-                                    class="fas fa-envelope"></i>nabuc.geral@gmail.com</a>
+                            <a href="mailto:nabuc.geral@gmail.com" itemprop="email"><i
+                                    class="fas fa-envelope"></i>nabuc.geral@gmail.com
+                            </a>
                         </div>
-                        {{-- <div class="top-header-block">
-							<a href="tel:+9779813639131" itemprop="telephone"><i class="fas fa-phone"></i> </a>
-						</div> --}}
                     </div>
-                    <div class="top-header-right">
-                        {{-- <div class="social-block">
-							<ul class="social-list">
-								<li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
-								<li><a href=""><i class="fab fa-facebook-square"></i></a></li>
-								<li><a href=""><i class="fab fa-facebook-messenger"></i></a></li>
-								<li><a href=""><i class="fab fa-twitter"></i></a></li>
-								<li><a href=""><i class="fab fa-skype"></i></a></li>
-							</ul>
-						</div> --}}
-                        <div class="login-block">
-                            <a href="/login">Login</a>
-                            <a> | </a>
-                            <a href="/register">Register</a>
-                        </div>
+                    <div class="top-header-block">
+                        <a><i class="fas fa-map-marked-alt"></i>Praça D. Lourenço Vicente, n. 1, 2530-126 Lourinhã</a>
                     </div>
                 </div>
             </div>
             <!-- Top header Close -->
             <div class="main-header">
                 <div class="container">
-                    <div class="logo-wrap" itemprop="logo">
-                        <img class="logo" src="images/logo.png" alt="Logo Image">
-                        <!-- <h1>Education</h1> -->
-                    </div>
                     <div class="nav-wrap">
                         <nav class="nav-desktop">
                             <ul class="menu-list">
+                                <a href="/"><img class="logo" src="/images/logo.png" alt="Logo Image"></a>
                                 <li><a href="/">Home</a></li>
                                 <li><a href="/about">Sobre nós</a></li>
                                 <li class="menu-parent">Catalogo
                                     <ul class="sub-menu">
-                                        <li><a href="#">Gruta #1</a></li>
+                                        @for ($i = 1; $i < 83; $i++)
+                                            <li><a href="#">Gruta {{ $i }}</a></li>
+                                        @endfor
                                     </ul>
                                 </li>
                                 <li class="menu-parent">Eventos
@@ -74,23 +58,38 @@
                                         <li><a href="/eventos/pdmlnh">Participação na revisão do PDMLNH</a></li>
                                         <li><a href="/eventos/pel">Participação no PEL</a></li>
                                         <li><a href="/eventos/opl">OPL-2016</a></li>
-                                        <li><a href="/eventos/proposta">Proposta "Valorização do Planalto das
-                                                Cesaredas"</a>
-                                        </li>
+                                        <li><a href="/eventos/proposta">Proposta "Valorização do Planalto
+                                                das Cesaredas"</a></li>
                                         <li><a href="/eventos/congresso">I Congresso sobre o Planalto das Cesaredas</a>
                                         </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-parent">Arqueologia
+                                    <ul class="sub-menu">
+                                        <li><a href="/arqueologia/fornos">Fornos de Cal no Concelho da Lourinhã</a>
+                                        </li>
+                                        <li><a href="/arqueologia/saoLourenco">A Presença Romana em São Lourenço dos
+                                                Francos</a></li>
+                                        <li><a href="/arqueologia/aqueduto">Aqueduto da Quinta do Perdigão</a></li>
+                                        <li><a href="/arqueologia/esquecidos">Esquecidos na escuridão do tempo...</a>
+                                        </li>
+                                        <li><a href="/arqueologia/pataco">Um "Pataco" perdido...</a></li>
+                                        <li><a href="/arqueologia/monardo">Monardo dos Francos</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-parent">Bioespeleologia
+                                    <ul class="sub-menu">
+                                        <li><a href="/bioespeleologia/insetos">Insectos</a></li>
+                                        <li><a href="/bioespeleologia/aracnideos">Aracnídeos</a></li>
+                                        <li><a href="/bioespeleologia/anfibeos">Anfibios</a></li>
+                                        <li><a href="/bioespeleologia/repteis">Repteis</a></li>
+                                        <li><a href="/bioespeleologia/quiroperos">Quiropteros</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="/rescue">Busca e Salvamento</a></li>
                                 <li><a href="/espeleologia">Espeleologia</a></li>
                             </ul>
                         </nav>
-                        <div id="bar">
-                            <i class="fas fa-bars"></i>
-                        </div>
-                        <div id="close">
-                            <i class="fas fa-times"></i>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -108,12 +107,13 @@
                                 nada se mata, a não ser o tempo."</strong><br><br>Lema dos exploradores de cavernas</p>
                         {{-- <h4><a href="tel:+9779813639131"><i class="fas fa-phone"></i> +977 9813639131</a></h4> --}}
                         <h4><a href="mailto:info@educationpro.com"><i
-                                    class="fas fa-envelope"></i>nabuc.geral@gmail.com</a></h4>
+                                    class="fas fa-envelope"></i>nabuc.geral@gmail.com</a>
+                        </h4>
                         <h4><a href=""><i class="fas fa-map-marker-alt"></i>Centro de Estudos Históricos da
                                 Lourinha<br>Praça D. Lourenço Vicente, n. 1, 2530-126 Lourinhã</a></h4>
                     </div>
 
-                    <img class="my" src="images/logoHorisontal.png" style="width: 50%; height: 50%;">
+                    <img class="my" src="/images/logoHorisontal.png" style="width: 50%; height: 50%;">
 
                     {{-- <div class="box-wrap">
 						<header>
@@ -187,16 +187,16 @@
         </footer>
     </div>
     <script src="https://kit.fontawesome.com/7ecf1ea985.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="js/lightbox.js"></script>
-    <script type="text/javascript" src="js/all.js"></script>
-    <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
-    <script type="text/javascript" src="js/owl.carousel.js"></script>
-    <script type="text/javascript" src="js/jquery.flexslider.js"></script>
-    <script type="text/javascript" src="js/jquery.rateyo.js"></script>
+    <script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/js/lightbox.js"></script>
+    <script type="text/javascript" src="/js/all.js"></script>
+    <script type="text/javascript" src="/js/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" src="/js/owl.carousel.js"></script>
+    <script type="text/javascript" src="/js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="/js/jquery.rateyo.js"></script>
     <!-- <script type="text/javascript" src="js/jquery.mmenu.all.js"></script> -->
     <!-- <script type="text/javascript" src="js/jquery.meanmenu.min.js"></script> -->
-    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="/js/custom.js"></script>
 </body>
 
 </html>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Grutas;
 use Illuminate\Http\Request;
+use PHPUnit\TextUI\XmlConfiguration\Groups;
 
 class GrutasController extends Controller
 {
@@ -15,6 +16,7 @@ class GrutasController extends Controller
     public function index()
     {
         //
+        return view('grutas.index');
     }
 
     /**
@@ -25,6 +27,8 @@ class GrutasController extends Controller
     public function create()
     {
         //
+
+        return view('grutas.create');
     }
 
     /**
@@ -36,6 +40,13 @@ class GrutasController extends Controller
     public function store(Request $request)
     {
         //
+        $grutas = new Grutas();
+        $grutas->name = request('inputNome');
+        $grutas->desc = request('inputDesc');
+        $grutas->img = request('inputIMG');
+
+        $grutas->save();
+        return redirect('/grutas');
     }
 
     /**
@@ -47,6 +58,7 @@ class GrutasController extends Controller
     public function show(Grutas $grutas)
     {
         //
+        return view('grutas.show');
     }
 
     /**
@@ -58,6 +70,7 @@ class GrutasController extends Controller
     public function edit(Grutas $grutas)
     {
         //
+        return view('grutas.edit');
     }
 
     /**

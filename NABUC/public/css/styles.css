@@ -5,8 +5,11 @@
 }
 
 .logo {
-    width: 20%;
+    width: 25%;
+    margin: auto;
 }
+
+/* ////////////////////// */
 
 .desc-about {
     margin: 25px;
@@ -30,6 +33,8 @@
     display: none;
 }
 
+/* ////////////////////// */
+
 .desc1-espel {
     margin: 15px;
     text-align: right;
@@ -51,9 +56,8 @@
 }
 
 .desc4-espel {
-    margin: 15px;
+    margin: 25px;
     width: 500px;
-    float: left;
 }
 
 .titulo1-espel {
@@ -81,6 +85,8 @@
     margin: 35px;
 }
 
+/* ////////////////////// */
+
 .titulo-rescue {
     color: rgb(255, 183, 0);
     text-align: center;
@@ -96,4 +102,147 @@
 .img-rescue {
     width: 20%;
     float: right;
+}
+
+/* ////////////////////// */
+
+.titulo-pdm {
+    color: rgb(255, 183, 0);
+    text-align: center;
+}
+
+/* ////////////////////// */
+
+.titulo-pel {
+    color: rgb(255, 183, 0);
+    text-align: center;
+}
+
+/* ////////////////////// */
+
+.titulo-opl {
+    color: rgb(255, 183, 0);
+    text-align: center;
+}
+
+.img-opl {
+    text-align: center;
+    width: 50%;
+}
+
+.video-opl {
+    text-align: center;
+}
+
+/* ////////////////////// */
+
+.titulo-prop {
+    color: rgb(255, 183, 0);
+    text-align: center;
+}
+
+/* ////////////////////// */
+
+.titulo-fornos {
+    color: rgb(255, 183, 0);
+    text-align: center;
+}
+
+.fornos1 {
+    text-align: center;
+}
+
+.fornos2 {
+    padding: 10px;
+}
+
+.desc1-fornos {
+    text-align: justify;
+    float: left;
+    width: 950px;
+    padding-left: 10px;
+}
+
+/* ////////////////////// */
+
+.titulo-saoLourenco {
+    text-align: center;
+    color: rgb(255, 183, 0);
+}
+
+.desc-saoLourenco {
+    padding: 10px;
+}
+
+.iframe-sao {
+    align-items: center;
+    width: 550px;
+    height: 360px;
+}
+
+/* ////////////////////// */
+
+.titulo-aqueduto {
+    text-align: center;
+    color: rgb(255, 183, 0);
+}
+
+.desc-aqueduto {
+    padding: 10px;
+}
+
+/* ////////////////////// */
+
+.titulo-esq {
+    text-align: center;
+    color: rgb(255, 183, 0);
+}
+
+.desc-esq {
+    padding: 10px;
+}
+
+/* ////////////////////// */
+
+.titulo-pataco {
+    text-align: center;
+    color: rgb(255, 183, 0);
+}
+
+.desc-pataco {
+    padding: 10px;
+}
+
+.img-pataco {
+    text-align: center;
+}
+
+/* ////////////////////// */
+
+.titulo-monardo {
+    text-align: center;
+    color: rgb(255, 183, 0);
+}
+
+.desc-monardo {
+    padding: 10px;
+}
+
+.img-monardo {
+    text-align: center;
+}
+
+/* ////////////////////// */
+
+.table-inseto {
+    text-align: center;
+    width: 500px;
+}
+
+.list-inseto {
+    padding-left: 20px;
+}
+
+.img-inseto {
+    flex-basis: 40%
 }

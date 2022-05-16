@@ -2,12 +2,10 @@
 
 @section('content')
     <div class="main-panel">
-        <div class="content-wrapper">
+        <div class="container">
             <div class="row">
                 <div class="col-sm-12">
                     <div class="home-tab">
-                        <div class="d-sm-flex align-items-center justify-content-between border-bottom">
-                        </div>
                         <div class="tab-content tab-content-basic">
                             <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview">
                                 <div class="row">
@@ -53,17 +51,23 @@
                                                                 <th>
                                                                     Imagem
                                                                 </th>
+                                                                <th>
+                                                                    Eliminar
+                                                                </th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
                                                             {{-- @foreach ($grutas as $gruta)
-                                                                <tr>
-                                                                    <td>{{ $gruta->id }}</td>
-                                                                    <td>{{ $gruta->name }}</td>
-                                                                    <td>{{ $gruta->descricao }}</td>
-                                                                    <td>{{ $gruta->img }}</td>
-                                                                </tr>
-                                                            @endforeach --}}
+                                                            <tr>
+                                                                <td>{{ $gruta->id }}</td>
+                                                                <td>{{ $gruta->name }}</td>
+                                                                <td>{{ $gruta->descricao }}</td>
+                                                                <td>{{ $gruta->img }}</td>
+                                                                <td>
+                                                                    <i class="far fa-trash-alt"></i>
+                                                                </td>
+                                                            </tr>
+                                                        @endforeach --}}
                                                         </tbody>
                                                     </table>
                                                 </div>
