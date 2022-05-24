@@ -59,7 +59,7 @@ Route::get('/arqueologia/monardo', function () {
 Route::get('/bioespeleologia/insetos', function () {
     return view('bioespeleologia.insetos');
 });
-Route::get('/bioespeleologia/aracndeos', function () {
+Route::get('/bioespeleologia/aracnideos', function () {
     return view('bioespeleologia.aracnideos');
 });
 Route::get('/bioespeleologia/anfibios', function () {

@@ -1,8 +1,8 @@
 html {
     font-size: 62.5%;
-    line-height: 1.15;
+    line-height: 1;
     /* 1 */
-    -webkit-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 95%;
     /* 2 */
 }
 
@@ -692,11 +692,13 @@ li {
     font-size: 1.8rem;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    color: #3a3a3a;
+    color: #ffffff;
+    background-color: #484847;
 }
 
 .nav-desktop li {
-    padding: 1.6rem;
+    padding: 1.6em;
+    color: white;
 }
 
 .nav-desktop ul ul {
@@ -754,7 +756,7 @@ ul>li {
 
 .menu-parent::after {
     content: "";
-    border: solid #3a3a3a;
+    border: solid #ffffff;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
@@ -841,8 +843,8 @@ ul>li {
     text-align: center;
     /*padding-top: 6em;*/
     /*padding-bottom: 4.687em;*/
-    padding-top: 6.25em;
-    padding-bottom: 4.375em;
+    padding-top: 6em;
+    padding-bottom: 4em;
 }
 
 .page-heading .container h2 {
@@ -891,7 +893,7 @@ ul>li {
     position: absolute;
     border: 0.5px solid #d4d4d4;
     bottom: 0;
-    width: 530px;
+    width: 500px;
     left: 27.5%;
 }
 

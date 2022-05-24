@@ -15,14 +15,15 @@
     <link rel="stylesheet" href="/vendors/typicons/typicons.css">
     <link rel="stylesheet" href="/vendors/simple-line-icons/css/simple-line-icons.css">
     <link rel="stylesheet" href="/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="/css/adminlte.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="/css/adminlte.min.css">
-    <!-- endinject -->
     <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="/vendors/select2/select2.min.css">
+    <link rel="stylesheet" href="/vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
     <link rel="stylesheet" href="/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
     <link rel="stylesheet" href="/js/select.dataTables.min.css">
     <!-- End plugin css for this page -->
@@ -109,7 +110,6 @@
                             <li class="nav-item"><a class="nav-link"
                                     href="{{ route('grutas.create') }}">Adicionar</a>
                             </li>
-                            <li class="nav-item"> <a class="nav-link" href="">Editar</a></li>
                             <li class="nav-item"> <a class="nav-link"
                                     href="{{ route('grutas') }}">Listar</a></li>
                         </ul>
@@ -140,7 +140,8 @@
     <script src="/vendors/chart.js/Chart.min.js"></script>
     <script src="/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
     <script src="/vendors/progressbar.js/progressbar.min.js"></script>
-
+    <script src="/vendors/select2/select2.min.js"></script>
+    <script src="/vendors/typeahead.js/typeahead.bundle.min.js"></script>
     <!-- End plugin js for this page -->
     <!-- inject:js -->
     <script src="/js/off-canvas.js"></script>
@@ -153,6 +154,39 @@
     <script src="/js/jquery.cookie.js" type="text/javascript"></script>
     <script src="/js/dashboard.js"></script>
     <script src="/js/Chart.roundedBarCharts.js"></script>
+    <script src="/js/file-upload.js"></script>
+    <script src="/js/typeahead.js"></script>
+    <script src="/js/select2.js"></script>
+    <script>
+        $(function() {
+            // Multiple images preview with JavaScript
+            var multiImgPreview = function(input, imgPreviewPlaceholder) {
+                if (input.files) {
+                    var filesAmount = input.files.length;
+                    for (i = 0; i < filesAmount; i++) {
+                        var reader = new FileReader();
+                        reader.onload = function(event) {
+                            var img = $.parseHTML('<span class="pic"><img src="' + event.target.result +
+                                '"  alt="Preview"><a class="remove-image" href="javascript:void(0)" onclick="deleteFoto()" style="display: inline;">&#215;</a></span>'
+                            );
+                            $(img).appendTo(imgPreviewPlaceholder);
+                            //$($.parseHTML('<img>')).attr('src', event.target.result).appendTo(imgPreviewPlaceholder);
+                        }
+                        reader.readAsDataURL(input.files[i]);
+                    }
+                }
+            };
+            $('#imagem').on('change', function() {
+                $('.pic').remove();
+                multiImgPreview(this, 'div.image-area');
+            });
+        });
+
+        function deleteFoto() {
+            $('.pic').remove();
+            $('#imagem').val('');
+        }
+    </script>
 </body>
 
 </html>

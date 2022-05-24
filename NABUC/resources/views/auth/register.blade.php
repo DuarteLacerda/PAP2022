@@ -32,7 +32,17 @@
                             <div class="brand-logo">
                                 <img src="../../images/logo.png" alt="logo">
                             </div>
-                            <h4>Bom dia</h4>
+                            <h4><?php
+                            $time = date('H');
+                            $timezone = date('e');
+                            if ($time >= '06' && $time < '13') {
+                                echo 'Bom Dia,';
+                            } elseif ($time >= '13' && $time < '20') {
+                                echo 'Boa Tarde,';
+                            } elseif ($time >= '20' && $time < '06') {
+                                echo 'Boa Noite,';
+                            }
+                            ?></h4>
                             <h6 class="fw-light">Regista-te para continuares</h6>
                             <form class="pt-3" method="POST" action="{{ route('register') }}">
                                 @csrf

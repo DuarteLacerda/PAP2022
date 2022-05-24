@@ -39,35 +39,23 @@
                                                     <table class="table table-bordered">
                                                         <thead>
                                                             <tr>
-                                                                <th>
-                                                                    Id
-                                                                </th>
-                                                                <th>
-                                                                    Nome
-                                                                </th>
-                                                                <th>
-                                                                    Descrição
-                                                                </th>
-                                                                <th>
-                                                                    Imagem
-                                                                </th>
-                                                                <th>
-                                                                    Eliminar
-                                                                </th>
+                                                                <th>Id</th>
+                                                                <th>Nome</th>
+                                                                <th>Descrição</th>
+                                                                <th>Imagem</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            {{-- @foreach ($grutas as $gruta)
-                                                            <tr>
-                                                                <td>{{ $gruta->id }}</td>
-                                                                <td>{{ $gruta->name }}</td>
-                                                                <td>{{ $gruta->descricao }}</td>
-                                                                <td>{{ $gruta->img }}</td>
-                                                                <td>
-                                                                    <i class="far fa-trash-alt"></i>
-                                                                </td>
-                                                            </tr>
-                                                        @endforeach --}}
+                                                            @foreach ($gruta as $grt)
+                                                                <tr>
+                                                                    <td>{{ $grt->id }}</td>
+                                                                    <td><a
+                                                                            href="/grutas/edit/{{ $grt->id }}">{{ $grt->name }}</a>
+                                                                    </td>
+                                                                    <td>{{ $grt->desc }}</td>
+                                                                    <td>{{ $grt->img }}</td>
+                                                                </tr>
+                                                            @endforeach
                                                         </tbody>
                                                     </table>
                                                 </div>

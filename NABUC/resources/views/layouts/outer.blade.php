@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="/css/inner-page-style.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
     <link rel="shortcut icon" href="/images/favicon.ico" type="/image/x-icon">
 </head>
@@ -32,23 +33,28 @@
                             </a>
                         </div>
                     </div>
-                    <div class="top-header-block">
-                        <a><i class="fas fa-map-marked-alt"></i>Praça D. Lourenço Vicente, n. 1, 2530-126 Lourinhã</a>
+                    <div class="top-header-right">
+                        <div class="top-header-block">
+                            <a style="color: white; text-decoration: underline;"><i class="fas fa-map-marker-alt"></i>
+                                Praça D. Lourenço Vicente, n.
+                                1, 2530-126
+                                Lourinhã</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- Top header Close -->
             <div class="main-header">
-                <div class="container">
+                <div class="nav-nabuc">
                     <div class="nav-wrap">
                         <nav class="nav-desktop">
                             <ul class="menu-list">
-                                <a href="/"><img class="logo" src="/images/logo.png" alt="Logo Image"></a>
+                                <img class="logo" src="/images/logo.png" alt="Logo Image">
                                 <li><a href="/">Home</a></li>
                                 <li><a href="/about">Sobre nós</a></li>
                                 <li class="menu-parent">Catalogo
                                     <ul class="sub-menu">
-                                        @for ($i = 1; $i < 83; $i++)
+                                        @for ($i = 1; $i < 85; $i++)
                                             <li><a href="#">Gruta {{ $i }}</a></li>
                                         @endfor
                                     </ul>
@@ -81,9 +87,9 @@
                                     <ul class="sub-menu">
                                         <li><a href="/bioespeleologia/insetos">Insectos</a></li>
                                         <li><a href="/bioespeleologia/aracnideos">Aracnídeos</a></li>
-                                        <li><a href="/bioespeleologia/anfibeos">Anfibios</a></li>
+                                        <li><a href="/bioespeleologia/anfibios">Anfibios</a></li>
                                         <li><a href="/bioespeleologia/repteis">Repteis</a></li>
-                                        <li><a href="/bioespeleologia/quiroperos">Quiropteros</a></li>
+                                        <li><a href="/bioespeleologia/quiropteros">Quiropteros</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="/rescue">Busca e Salvamento</a></li>
@@ -105,50 +111,15 @@
                         </header>
                         <p><strong>"De uma caverna nada se tira, a não ser fotos; nada se deixa, a não ser pegadas; e
                                 nada se mata, a não ser o tempo."</strong><br><br>Lema dos exploradores de cavernas</p>
-                        {{-- <h4><a href="tel:+9779813639131"><i class="fas fa-phone"></i> +977 9813639131</a></h4> --}}
                         <h4><a href="mailto:info@educationpro.com"><i
                                     class="fas fa-envelope"></i>nabuc.geral@gmail.com</a>
                         </h4>
-                        <h4><a href=""><i class="fas fa-map-marker-alt"></i>Centro de Estudos Históricos da
+                        <h4><a
+                                href="https://www.google.com/maps/place/Pra%C3%A7a+Dom+Louren%C3%A7o+Vicente+1,+2530-126+Lourinh%C3%A3/@39.2422359,-9.3130431,17z/data=!3m1!4b1!4m5!3m4!1s0xd1f37d327e72021:0x282313acc3e1770a!8m2!3d39.2422359!4d-9.3130431"><i
+                                    class="fas fa-map-marker-alt"></i>Centro de Estudos Históricos da
                                 Lourinha<br>Praça D. Lourenço Vicente, n. 1, 2530-126 Lourinhã</a></h4>
                     </div>
-
                     <img class="my" src="/images/logoHorisontal.png" style="width: 50%; height: 50%;">
-
-                    {{-- <div class="box-wrap">
-						<header>
-							<h1>links</h1>
-						</header>
-						<ul>
-							<li><a href="#">Teacher</a></li>
-							<li><a href="#">Courses</a></li>
-							<li><a href="#">Courses</a></li>
-							<li><a href="#">Courses</a></li>
-							<li><a href="#">Courses</a></li>
-							<li><a href="#">Courses</a></li>
-						</ul>
-					</div>
-
-					<div class="box-wrap">
-						<header>
-							<h1>recent courses</h1>
-						</header>
-						<div class="recent-course-wrap">
-							<img src="images/ui-ux.jpg" alt="Ui/Ux Designing">
-							<a href=""><div class="course-name">
-								<h3>UI/UX Designer courses</h3>
-								<p><span>$50</span> $40</p>
-							</div></a>
-						</div>
-						<div class="recent-course-wrap">
-							<img src="images/ui-ux.jpg" alt="Ui/Ux Designing">
-							<a href=""><div class="course-name">
-								<h3>UI/UX Designer courses</h3>
-								<p><span>$50</span> $40</p>
-							</div></a>
-						</div>
-					</div> --}}
-
                     <div class="box-wrap">
                         <header>
                             <h1>Queres contactar-nos?</h1>
@@ -159,20 +130,12 @@
                             <button>Enviar</button>
                         </section>
                     </div>
-
                 </div>
             </div>
             <!-- End of box-Wrap -->
             <div class="footer-second-section">
                 <div class="container">
                     <hr class="footer-line">
-                    {{-- <ul class="social-list">
-						<li><a href=""><i class="fab fa-facebook-square"></i></a></li>
-						<li><a href=""><i class="fab fa-twitter"></i></a></li>
-						<li><a href=""><i class="fab fa-skype"></i></a></li>
-						<li><a href=""><i class="fab fa-youtube"></i></a></li>
-						<li><a href=""><i class="fab fa-instagram"></i></a></li>
-					</ul> --}}
                     <i class="fa-regular fa-compass"></i>
                     <hr class="footer-line">
                 </div>
