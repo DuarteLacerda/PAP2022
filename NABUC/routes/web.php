@@ -76,6 +76,7 @@ Auth::routes();
 
 Route::get('/grutas', [App\Http\Controllers\GrutasController::class, 'index'])->name('grutas');
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+Route::get('/catalogo', [App\Http\Controllers\CatalogoController::class, 'index'])->name('catalogo');
 Route::post('/grutas', [App\Http\Controllers\GrutasController::class, 'store']);
 Route::get('/grutas/create', [App\Http\Controllers\GrutasController::class, 'create'])->name('grutas.create');
 Route::get('/grutas/{grutas}', [App\Http\Controllers\GrutasController::class, 'show']);

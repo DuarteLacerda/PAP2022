@@ -30,8 +30,7 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="inputDesc">Descrição</label>
-                                                        <textarea class="form-control" id="inputDesc" name="inputDesc" rows="4"
-                                                            placeholder="Descrição">{{ $grutas->desc }}</textarea>
+                                                        <textarea class="form-control" id="inputDesc" name="inputDesc" rows="4" placeholder="Descrição">{{ $grutas->desc }}</textarea>
                                                         @error('inputDesc')
                                                             <p class="text-danger">Este Campo é obrigatório!</p>
                                                         @enderror
@@ -42,7 +41,7 @@
                                                             <div class="image-area">
                                                                 @if (Storage::exists('/public/images/grutas/' . $grutas->img))
                                                                     <span class="pic">
-                                                                        <img src="{{ Storage::url('$grutas->img') }}"
+                                                                        <img src="{{ asset('/storage/images/grutas/' . $grutas->img) }}"
                                                                             alt="Preview">
                                                                         <a class="remove-image" href="javascript:void(0)"
                                                                             onclick="deleteFoto()"
@@ -53,8 +52,8 @@
                                                         </div>
                                                         <div class="input-group">
                                                             <div class="custom-file">
-                                                                <input type="file" class="custom-file-input" id="imagem"
-                                                                    name="imagem">
+                                                                <input type="file" class="custom-file-input"
+                                                                    id="imagem" name="imagem">
                                                                 <label class="custom-file-label" for="imagem">Insira uma
                                                                     imagem</label>
                                                             </div>

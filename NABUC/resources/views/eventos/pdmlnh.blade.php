@@ -100,7 +100,9 @@
                     membros do NABUC- Núcleo de Amigos dos Buracos das Cesaredas resultam nas seguintes conclusões:
                     <br>
             </h2>
-            <button onclick="myFunction()" id="myBtn">Ler Mais</button>
+        </div>
+        <button class="btn" onclick="myFunction()" id="myBtn">Ler Mais</button>
+        <div>
             <h1 class="titulo-pdm"><br>Estudos de caracterização - Património Paleontológico:</h1>
             <h2 class="desc-pdm">
                 <br>
@@ -160,7 +162,9 @@
                 da Cesareda.
                 <br>
             </h2>
-            <h1 class="titulo-pdm"><br>Do Anexo I do regulamento, alertamos ou rectificamos as seguintes informações
+            <h1 class="titulo-pdm">
+                <br>
+                Do Anexo I do regulamento, alertamos ou rectificamos as seguintes informações
             </h1>
             <h2 class="desc-pdm">
                 <br>
@@ -336,8 +340,6 @@
                 <a href="https://patrimoniogeologicolourinha.blogspot.pt/2011/12/fosseis-do-jurassico.html"
                     target="_blank">Fosseis do
                     Jurássico</a>
-                <br>
-                <a href="https://cesaredas.no.sapo.pt/registofossil.htm" target="_blank">Registo Fossil</a>
                 <br>
                 <a href="https://www.eib.org/attachments/pipeline/20090615_nts2_pt.pdf" target="_blank">PARQUE EÓLICO DA
                     LOURINHÃ I - ESTUDO

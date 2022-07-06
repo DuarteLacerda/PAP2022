@@ -110,18 +110,14 @@ class GrutasController extends Controller
             $grutas->img = $name;
         }
 
-        $grutas->save();
-
-        for ($i = 1; $i < 101; $i++) {
-            $currentPhoto[] = DB::select('select img from grutas');
-            if ($name = request('imagem')->getClientOriginalName() == $currentPhoto[$i]) {
-                $userPhoto = public_path('/public/images/grutas/') . $currentPhoto;
-                if (Storage::exists('/public/images/grutas/' . $name)) {
-                    Storage::delete('/public/images/grutas/' . $name);
-                }
-                $file->storeAs('/public/images/grutas', $name);
-            }
+        $results = DB::select('select img from grutas where id = :id', ['id' => $grutas->id]);
+        $currentPhoto[] = $results;
+        if ($name = request('imagem')->getClientOriginalName() == $currentPhoto) {
+            Storage::delete('/public/images/grutas/' . $name);
         }
+        $file->storeAs('/public/images/grutas', $name);
+
+        $grutas->save();
 
         return redirect('/grutas')->with('message', 'Gruta alterada com sucesso!');
     }
@@ -136,6 +132,12 @@ class GrutasController extends Controller
     {
         //
         $grutas->delete();
+        /* $results = DB::select('select img from grutas where id = :id', ['id' => $grutas->id]); */
+        /* $currentPhoto = $results;
+        if ($name = request('imagem') == $currentPhoto) {
+            Storage::delete('/public/images/grutas/' . $name);
+            $grutas->delete();
+        }*/
         return redirect('/grutas')->with('message', 'Gruta eliminada com sucesso!');
     }
 }

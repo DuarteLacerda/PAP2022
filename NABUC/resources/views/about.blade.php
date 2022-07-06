@@ -4,8 +4,8 @@
     <div class="container">
         <div class="box">
             <div class="row">
-                <div class="desc-about">
-                    <h2>
+                <div class="col-8">
+                    <h2 class="desc-about">
                         NABUC - Nucleo de Amigos dos Buracos das Cesaredas.
                         De uma ideia surgem várias opiniões, ao fim de vários debates a ideia passa a um plano e de um plano
                         surge
@@ -20,7 +20,13 @@
                             Lourinhã</a>, integrando no mesmo como secção de Espeleologia.
                     </h2>
                 </div>
-                <img class="img-cave1" src="images/cave1.jpg" alt="cave1">
+                <div class="col-4">
+                    <img class="img-cave1" src="images/cave1.jpg" alt="cave1">
+                </div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12349.90833433481!2d-9.245183864562312!3d39.300107972166856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1f4a6228e7dc69%3A0x7b51b3fba61bd11e!2sCesaredas%2C%20Reguengo%20Grande!5e0!3m2!1spt-PT!2spt!4v1653400427214!5m2!1spt-PT!2spt"
+                    width="600" height="450" style="border:0;margin:15px" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="row">
                 <h2 class="desc2-about">
@@ -80,14 +86,12 @@
                         investigação
                         feitos por Nery Delgado, ocorreram no século XIX, em 1866 e 1867.
                 </h2>
-                <button onclick="myFunction()" id="myBtn">Ler Mais</button>
-                <h2 style="margin-bottom: 15px">
-                    <br><br><br>
-                    <a
-                        href="https://www.olhomarinho.net/custompages/showpage.aspx?pageid=95490b16-1e58-4584-ab15-625a2e8255b0&m=b57">Fonte
-                        - Olho Marinho</a>
-                </h2>
             </div>
+            <button class="btn" onclick="myFunction()" id="myBtn">Ler Mais</button>
+            <h2 style="margin-bottom: 15px">
+                <br><br><br>
+                <a href="https://www.olhomarinho.net">Mais Sobre - Olho Marinho</a>
+            </h2>
         </div>
     </div>
 @endsection
