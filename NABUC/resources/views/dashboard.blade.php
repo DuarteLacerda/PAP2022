@@ -36,13 +36,14 @@
                                             <div class="card-body">
                                                 <h4 class="card-title">Grutas Listadas</h4>
                                                 <div class="table-responsive pt-3">
-                                                    <table class="table table-bordered">
+                                                    <table id="grutas" class="table table-bordered">
                                                         <thead>
                                                             <tr>
                                                                 <th>Id</th>
                                                                 <th>Nome</th>
                                                                 <th>Descrição</th>
-                                                                <th>Imagem</th>
+                                                                <th>Data publicação</th>
+                                                                <th>Última atualização</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -53,7 +54,8 @@
                                                                             href="/grutas/edit/{{ $grt->id }}">{{ $grt->name }}</a>
                                                                     </td>
                                                                     <td>{{ $grt->desc }}</td>
-                                                                    <td>{{ $grt->img }}</td>
+                                                                    <td>{{ $grt->created_at }}</td>
+                                                                    <td>{{ $grt->updated_at }}</td>
                                                                 </tr>
                                                             @endforeach
                                                         </tbody>

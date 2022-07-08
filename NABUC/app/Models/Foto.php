@@ -4,13 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Storage;
 
-class Grutas extends Model
+class Foto extends Model
 {
     use HasFactory;
-    public function fotos()
-    {
-        return $this->hasMany(Foto::class);
+    protected $fillable = [
+        'name'
+    ];
+    public function grutas(){
+        return $this->belongsTo(Grutas::class);
     }
 }

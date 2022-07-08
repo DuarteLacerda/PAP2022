@@ -6,21 +6,35 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="home-tab">
+                        <div class="row">
+                            <div class="col-md-12">
+                                @if (Session::has('message'))
+                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        {{ Session::get('message') }}
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                @endif
+                            </div>
+                        </div>
                         <div class="tab-content tab-content-basic">
-                            <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview">
+                            <div class="tab-pane fade show active" id="overview" role="tabpanel"
+                                aria-labelledby="overview">
                                 <div class="row">
                                     <div class="col-md-6 col-lg-12 grid-margin stretch-card">
                                         <div class="card">
                                             <div class="card-body">
                                                 <h4 class="card-title">Grutas Listadas</h4>
                                                 <div class="table-responsive pt-3">
-                                                    <table id="example1" class="table table-bordered table-striped">
+                                                    <table id="grutas" class="table table-bordered table-striped">
                                                         <thead>
                                                             <tr>
                                                                 <th>Id</th>
                                                                 <th>Nome</th>
                                                                 <th>Descrição</th>
-                                                                <th>Imagem</th>
+                                                                <th>Data publicação</th>
+                                                                <th>Última atualização</th>
                                                                 <th>Eliminar</th>
                                                             </tr>
                                                         </thead>
@@ -32,9 +46,10 @@
                                                                             href="/grutas/edit/{{ $grt->id }}">{{ $grt->name }}</a>
                                                                     </td>
                                                                     <td>{{ $grt->desc }}</td>
-                                                                    <td>{{ $grt->img }}</td>
+                                                                    <td>{{ $grt->created_at }}</td>
+                                                                    <td>{{ $grt->updated_at }}</td>
                                                                     <td class="text-center">
-                                                                        <form action="/grutas/{{ $grt->id }}"
+                                                                        <form role="form" action="/grutas/{{ $grt->id }}"
                                                                             method="post">
                                                                             @csrf
                                                                             @method('DELETE')

@@ -21,14 +21,14 @@
                                                     <div class="form-group">
                                                         <label for="inputNome">Nome da gruta</label>
                                                         <input type="text" class="form-control" id="inputNome"
-                                                            name="inputNome" placeholder="Nome da gruta">
+                                                            name="inputNome" placeholder="Nome da gruta" required>
                                                         @error('inputNome')
                                                             <p class="text-danger">Este Campo é obrigatório!</p>
                                                         @enderror
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="inputDesc">Descrição</label>
-                                                        <textarea class="form-control" id="inputDesc" name="inputDesc" rows="4" placeholder="Descrição"></textarea>
+                                                        <textarea class="form-control" id="inputDesc" name="inputDesc" rows="4" placeholder="Descrição" required></textarea>
                                                         @error('inputDesc')
                                                             <p class="text-danger">Este Campo é obrigatório!</p>
                                                         @enderror
@@ -36,25 +36,27 @@
                                                     <div class="form-group">
                                                         <label for="imagem">Imagem</label>
                                                         <div class="user-image mb-3 text-center">
-                                                            <div class="image-area"> </div>
+                                                            <div class="imgPreview"></div>
                                                         </div>
                                                         <div class="input-group">
                                                             <div class="custom-file">
-                                                                <input type="file" class="custom-file-input" id="imagem"
-                                                                    name="imagem">
-                                                                <label class="custom-file-label" for="imagem">Insira uma
+                                                                <input type="file" class="custom-file-input"
+                                                                    id="images" name="imageFile[]" multiple="multiple"
+                                                                    required>
+                                                                <label class="custom-file-label" for="images">Insira uma
                                                                     imagem</label>
                                                             </div>
                                                             <div class="input-group-append">
                                                                 <span class="input-group-text">Upload</span>
                                                             </div>
                                                         </div>
-                                                        @error('imagem')
+                                                        @error('imageFile.*')
                                                             <p class="text-danger">Este Campo é obrigatório!</p>
                                                         @enderror
                                                     </div>
-                                                    <button type="submit" class="btn btn-success me-2">Submeter</button>
-                                                    <button type="reset" class="btn btn-primary">Limpar</button>
+                                                    <button type="submit" class="btn btn-success me-2">Enviar</button>
+                                                    <button type="button" class="btn btn-warning "
+                                                        id="btnLimpar">Limpar</button>
                                                 </form>
                                             </div>
                                         </div>

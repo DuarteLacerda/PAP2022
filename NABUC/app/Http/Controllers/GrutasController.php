@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Foto;
 use App\Models\Grutas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -43,22 +44,39 @@ class GrutasController extends Controller
     public function store(Request $request)
     {
         //
-        Request()->validate([
+        request()->validate([
             'inputNome' => 'required',
             'inputDesc' => 'required',
-            'imagem' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:1024',
         ]);
 
         $gruta = new Grutas();
         $gruta->name = request('inputNome');
         $gruta->desc = request('inputDesc');
-        if ($request->hasFile('imagem')) {
-            $file = request('imagem');
-            $name = request('imagem')->getClientOriginalName();
-            $gruta->img = $name;
-        }
-        $file->storeAs('/public/images/grutas', $name);
+
         $gruta->save();
+
+        $request->validate([
+            //'imageFile' => 'required',
+            'imageFile.*' => 'mimes:jpeg,jpg,png|max:1024'
+        ]);
+        if ($request->hasfile('imageFile')) {
+
+            $i = 1;
+            foreach ($request->file('imageFile') as $file) {
+                $name = $file->getClientOriginalName();
+                $extension = pathinfo($name, PATHINFO_EXTENSION);
+                $designacao = preg_replace(array("/(á|à|ã|â|ä)/", "/(Á|À|Ã|Â|Ä)/", "/(é|è|ê|ë)/", "/(É|È|Ê|Ë)/", "/(í|ì|î|ï)/", "/(Í|Ì|Î|Ï)/", "/(ó|ò|õ|ô|ö)/", "/(Ó|Ò|Õ|Ô|Ö)/", "/(ú|ù|û|ü)/", "/(Ú|Ù|Û|Ü)/", "/(ñ)/", "/(Ñ)/"), explode(" ", "a A e E i I o O u U n N"), $gruta->name);
+                $designacao = str_replace(' ', '', $designacao);
+                $name = $designacao . $i . "." . $extension;
+                $file->storeAs('public/images/grutas/', $name);
+                $imgData[] = $name;
+                $i++;
+            }
+            $fileModal = new Foto();
+            $fileModal->name = json_encode($imgData);
+            $fileModal->grutas_id = $gruta->id;
+            $fileModal->save();
+        }
         return redirect('/grutas')->with('message', 'Gruta inserida com sucesso!');
     }
 
@@ -83,7 +101,14 @@ class GrutasController extends Controller
     public function edit(Grutas $grutas)
     {
         //
-        return view('grutas.edit', compact('grutas'));
+        $foto = Foto::where('grutas_id', $grutas->id)->first();
+        if ($foto) {
+            $name = json_decode($foto->name);
+        } else {
+            $name = [];
+        }
+
+        return view('grutas.edit', compact('grutas', 'foto', 'name'));
     }
 
     /**
@@ -96,28 +121,42 @@ class GrutasController extends Controller
     public function update(Request $request, Grutas $grutas)
     {
         //
-        Request()->validate([
+        request()->validate([
             'inputNome' => 'required',
             'inputDesc' => 'required',
-            'imagem' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:1024',
         ]);
 
-        $grutas->name = request('inputNome');
-        $grutas->desc = request('inputDesc');
-        if ($request->hasFile('imagem')) {
-            $file = $request->file('imagem');
-            $name = request('imagem')->getClientOriginalName();
-            $grutas->img = $name;
-        }
+        $gruta = new Grutas();
+        $gruta->name = request('inputNome');
+        $gruta->desc = request('inputDesc');
 
-        $results = DB::select('select img from grutas where id = :id', ['id' => $grutas->id]);
-        $currentPhoto[] = $results;
-        if ($name = request('imagem')->getClientOriginalName() == $currentPhoto) {
-            Storage::delete('/public/images/grutas/' . $name);
-        }
-        $file->storeAs('/public/images/grutas', $name);
+        $gruta->save();
 
-        $grutas->save();
+        $request->validate([
+            //'imageFile' => 'required',
+            'imageFile.*' => 'mimes:jpeg,jpg,png|max:1024'
+        ]);
+        if ($request->hasfile('imageFile')) {
+
+            $fileModal = Foto::where('grutas_id', $gruta->id)->first();
+            $fotos = ($fileModal) ? json_decode($fileModal->name) : [];
+            $i = count($fotos) + 1;
+
+            $i = 1;
+            foreach ($request->file('imageFile') as $file) {
+                $name = $file->getClientOriginalName();
+                $extension = pathinfo($name, PATHINFO_EXTENSION);
+                $designacao = preg_replace(array("/(á|à|ã|â|ä)/", "/(Á|À|Ã|Â|Ä)/", "/(é|è|ê|ë)/", "/(É|È|Ê|Ë)/", "/(í|ì|î|ï)/", "/(Í|Ì|Î|Ï)/", "/(ó|ò|õ|ô|ö)/", "/(Ó|Ò|Õ|Ô|Ö)/", "/(ú|ù|û|ü)/", "/(Ú|Ù|Û|Ü)/", "/(ñ)/", "/(Ñ)/"), explode(" ", "a A e E i I o O u U n N"), $gruta->name);
+                $designacao = str_replace(' ', '', $designacao);
+                $name = $designacao . $i . "." . $extension;
+                $file->storeAs('public/images/grutas/', $name);
+                $imgData[] = $name;
+                $i++;
+            }
+            $imgData = array_merge($fotos, $imgData);
+            $fileModal->name = json_encode($imgData);
+            $fileModal->save();
+        }
 
         return redirect('/grutas')->with('message', 'Gruta alterada com sucesso!');
     }
@@ -132,12 +171,6 @@ class GrutasController extends Controller
     {
         //
         $grutas->delete();
-        /* $results = DB::select('select img from grutas where id = :id', ['id' => $grutas->id]); */
-        /* $currentPhoto = $results;
-        if ($name = request('imagem') == $currentPhoto) {
-            Storage::delete('/public/images/grutas/' . $name);
-            $grutas->delete();
-        }*/
         return redirect('/grutas')->with('message', 'Gruta eliminada com sucesso!');
     }
 }

@@ -24,13 +24,29 @@
     <!-- Plugin css for this page -->
     <link rel="stylesheet" href="/vendors/select2/select2.min.css">
     <link rel="stylesheet" href="/vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
-    <link rel="stylesheet" href="/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
     <link rel="stylesheet" href="/js/select.dataTables.min.css">
+    <link rel="https://cdn.datatables.net/rowgroup/1.1.1/css/rowGroup.bootstrap4.min.css" />
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <link rel="stylesheet" href="/css/vertical-layout-light/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="/images/favicon.ico" />
+
+    <style>
+        .pic {
+            display: inline-block;
+            margin: 10px 10px 0 0;
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 9999;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -38,7 +54,8 @@
     <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
             <div class="me-3">
-                <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize">
+                <button class="navbar-toggler navbar-toggler align-self-center" type="button"
+                    data-bs-toggle="minimize">
                     <span class="icon-menu"></span>
                 </button>
             </div>
@@ -110,8 +127,7 @@
                             <li class="nav-item"><a class="nav-link"
                                     href="{{ route('grutas.create') }}">Adicionar</a>
                             </li>
-                            <li class="nav-item"> <a class="nav-link"
-                                    href="{{ route('grutas') }}">Listar</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="{{ route('grutas') }}">Listar</a></li>
                         </ul>
                     </div>
                 </li>
@@ -142,6 +158,7 @@
     <script src="/vendors/progressbar.js/progressbar.min.js"></script>
     <script src="/vendors/select2/select2.min.js"></script>
     <script src="/vendors/typeahead.js/typeahead.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap4.min.js"></script>
     <!-- End plugin js for this page -->
     <!-- inject:js -->
     <script src="/js/off-canvas.js"></script>
@@ -166,25 +183,55 @@
                     for (i = 0; i < filesAmount; i++) {
                         var reader = new FileReader();
                         reader.onload = function(event) {
-                            var img = $.parseHTML('<span class="pic"><img src="' + event.target.result +
-                                '"  alt="Preview"><a class="remove-image" href="javascript:void(0)" onclick="deleteFoto()" style="display: inline;">&#215;</a></span>'
-                            );
+                            var img = $.parseHTML(
+                                '<span class="pic new"><img width="200" class="img-thumbnail" src="' +
+                                event.target.result + '"</span>');
                             $(img).appendTo(imgPreviewPlaceholder);
-                            //$($.parseHTML('<img>')).attr('src', event.target.result).appendTo(imgPreviewPlaceholder);
                         }
                         reader.readAsDataURL(input.files[i]);
                     }
                 }
             };
-            $('#imagem').on('change', function() {
-                $('.pic').remove();
-                multiImgPreview(this, 'div.image-area');
+            $('#images').on('change', function() {
+                $('.new').remove();
+                multiImgPreview(this, 'div.imgPreview');
             });
         });
 
-        function deleteFoto() {
-            $('.pic').remove();
-            $('#imagem').val('');
+        $('.select2').select2()
+
+        $('#btnLimpar').click(function() {
+            $('input:text, textarea').val('');
+            $('div.imgPreview').empty();
+        });
+
+        $(document).ready(function() {
+            $('#grutas').DataTable({
+                "responsive": true,
+                "lengthChange": true,
+                "autoWidth": false,
+                "language": {
+                    order: [
+                        [3, 'desc']
+                    ]
+                }
+
+            });
+        });
+
+        function deleteFoto(foto, n, id) {
+            $('#' + id).remove();
+            $.ajax({
+                type: "delete",
+                url: "/fotos/" + foto + "/" + n,
+                data: {
+                    _token: '{{ csrf_token() }}'
+                },
+                dataType: "json",
+                success: function(response) {
+                    console.log("OK");
+                }
+            });
         }
     </script>
 </body>
