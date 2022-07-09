@@ -59,6 +59,8 @@ class GrutasController extends Controller
             //'imageFile' => 'required',
             'imageFile.*' => 'mimes:jpeg,jpg,png|max:1024'
         ]);
+
+        $fileModal = new Foto();
         if ($request->hasfile('imageFile')) {
 
             $i = 1;
@@ -72,11 +74,12 @@ class GrutasController extends Controller
                 $imgData[] = $name;
                 $i++;
             }
-            $fileModal = new Foto();
-            $fileModal->name = json_encode($imgData);
-            $fileModal->grutas_id = $gruta->id;
-            $fileModal->save();
+        } else {
+            $imgData = [];
         }
+        $fileModal->name = json_encode($imgData);
+        $fileModal->grutas_id = $gruta->id;
+        $fileModal->save();
         return redirect('/grutas')->with('message', 'Gruta inserida com sucesso!');
     }
 
@@ -126,11 +129,10 @@ class GrutasController extends Controller
             'inputDesc' => 'required',
         ]);
 
-        $gruta = new Grutas();
-        $gruta->name = request('inputNome');
-        $gruta->desc = request('inputDesc');
+        $grutas->name = request('inputNome');
+        $grutas->desc = request('inputDesc');
 
-        $gruta->save();
+        $grutas->save();
 
         $request->validate([
             //'imageFile' => 'required',
@@ -138,15 +140,17 @@ class GrutasController extends Controller
         ]);
         if ($request->hasfile('imageFile')) {
 
-            $fileModal = Foto::where('grutas_id', $gruta->id)->first();
+            $fileModal = Foto::where('grutas_id', $grutas->id)->first();
             $fotos = ($fileModal) ? json_decode($fileModal->name) : [];
-            $i = count($fotos) + 1;
 
-            $i = 1;
+            if ($i = count($fotos) > 0) {
+                $i = (int) filter_var(($fotos[count($fotos) - 1]), FILTER_SANITIZE_NUMBER_INT) + 1;
+            }
+
             foreach ($request->file('imageFile') as $file) {
                 $name = $file->getClientOriginalName();
                 $extension = pathinfo($name, PATHINFO_EXTENSION);
-                $designacao = preg_replace(array("/(á|à|ã|â|ä)/", "/(Á|À|Ã|Â|Ä)/", "/(é|è|ê|ë)/", "/(É|È|Ê|Ë)/", "/(í|ì|î|ï)/", "/(Í|Ì|Î|Ï)/", "/(ó|ò|õ|ô|ö)/", "/(Ó|Ò|Õ|Ô|Ö)/", "/(ú|ù|û|ü)/", "/(Ú|Ù|Û|Ü)/", "/(ñ)/", "/(Ñ)/"), explode(" ", "a A e E i I o O u U n N"), $gruta->name);
+                $designacao = preg_replace(array("/(á|à|ã|â|ä)/", "/(Á|À|Ã|Â|Ä)/", "/(é|è|ê|ë)/", "/(É|È|Ê|Ë)/", "/(í|ì|î|ï)/", "/(Í|Ì|Î|Ï)/", "/(ó|ò|õ|ô|ö)/", "/(Ó|Ò|Õ|Ô|Ö)/", "/(ú|ù|û|ü)/", "/(Ú|Ù|Û|Ü)/", "/(ñ)/", "/(Ñ)/"), explode(" ", "a A e E i I o O u U n N"), $grutas->name);
                 $designacao = str_replace(' ', '', $designacao);
                 $name = $designacao . $i . "." . $extension;
                 $file->storeAs('public/images/grutas/', $name);

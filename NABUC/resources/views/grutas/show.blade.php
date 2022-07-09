@@ -1,4 +1,4 @@
-@extends('layouts.onter')
+@extends('layouts.outer')
 
 @section('content')
 @endsection

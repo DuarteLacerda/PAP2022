@@ -81,14 +81,23 @@ class FotoController extends Controller
      */
     public function destroy(Foto $foto, $name)
     {
+        $existe = false;
         //
         Storage::delete('public/images/grutas' . $name);
         $fotos = json_decode($foto->name);
-        if (($key = array_search($name, $fotos)) != false) {
-            unset($fotos[$key]);
-            $foto->name = $fotos;
-        } else {
+
+        foreach ($fotos as $key => $value) {
+            if (strcmp($value, $name) == 0) {
+                array_splice($fotos, $key, 1);
+                $foto->name = json_encode($fotos);
+                $existe = true;
+                break;
+            }
+        }
+
+        if (!$existe) {
             $foto->name = [];
+            $foto->name = json_encode($fotos);
         }
         $foto->save();
     }

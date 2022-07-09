@@ -41,8 +41,7 @@
                                                         <div class="input-group">
                                                             <div class="custom-file">
                                                                 <input type="file" class="custom-file-input"
-                                                                    id="images" name="imageFile[]" multiple="multiple"
-                                                                    required>
+                                                                    id="images" name="imageFile[]" multiple="multiple">
                                                                 <label class="custom-file-label" for="images">Insira uma
                                                                     imagem</label>
                                                             </div>
@@ -50,9 +49,9 @@
                                                                 <span class="input-group-text">Upload</span>
                                                             </div>
                                                         </div>
-                                                        @error('imageFile.*')
+                                                        {{-- @error('imageFile.*')
                                                             <p class="text-danger">Este Campo é obrigatório!</p>
-                                                        @enderror
+                                                        @enderror --}}
                                                     </div>
                                                     <button type="submit" class="btn btn-success me-2">Enviar</button>
                                                     <button type="button" class="btn btn-warning "

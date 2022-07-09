@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Foto;
 use Illuminate\Http\Request;
 use App\Models\Grutas;
+use FFI;
 
 class CatalogoController extends Controller
 {
@@ -15,6 +17,7 @@ class CatalogoController extends Controller
     public function index()
     {
         $grutas = Grutas::all();
-        return view('catalogo', compact('grutas'));
+        $fotos = Foto::all();
+        return view('catalogo', compact('grutas', 'fotos'));
     }
 }

@@ -9,7 +9,8 @@
                         <div class="row">
                             <div class="col-md-12">
                                 @if (Session::has('message'))
-                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <div class="alert alert-success alert-dismissible fade show" style="margin: 5px"
+                                        role="alert">
                                         {{ Session::get('message') }}
                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
@@ -49,7 +50,8 @@
                                                                     <td>{{ $grt->created_at }}</td>
                                                                     <td>{{ $grt->updated_at }}</td>
                                                                     <td class="text-center">
-                                                                        <form role="form" action="/grutas/{{ $grt->id }}"
+                                                                        <form role="form"
+                                                                            action="/grutas/{{ $grt->id }}"
                                                                             method="post">
                                                                             @csrf
                                                                             @method('DELETE')
