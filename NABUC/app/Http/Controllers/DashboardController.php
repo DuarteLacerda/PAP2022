@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Eventos;
 use Illuminate\Http\Request;
 use App\Models\Grutas;
 
@@ -25,6 +26,7 @@ class DashboardController extends Controller
     public function index()
     {
         $gruta = Grutas::all();
-        return view('dashboard', compact('gruta'));
+        $eventos = Eventos::all();
+        return view('dashboard', compact('gruta', 'eventos'));
     }
 }

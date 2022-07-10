@@ -12,24 +12,23 @@
                                     <div class="col-md-6 col-lg-12 grid-margin stretch-card">
                                         <div class="card">
                                             <div class="card-header">
-                                                <h4 class="card-title">Nova Gruta</h4>
+                                                <h4 class="card-title">Novo Evento</h4>
                                             </div>
                                             <div class="card-body">
-                                                <form role="form" method="POST" action="/grutas"
+                                                <form role="form" method="POST" action="/evento"
                                                     enctype="multipart/form-data">
                                                     @csrf
                                                     <div class="form-group">
-                                                        <label for="inputNome">Nome da gruta</label>
+                                                        <label for="inputNome">Nome do Evento</label>
                                                         <input type="text" class="form-control" id="inputNome"
-                                                            name="inputNome" placeholder="Nome da gruta" required>
+                                                            name="inputNome" placeholder="Nome do Evento" required>
                                                         @error('inputNome')
                                                             <p class="text-danger">Este Campo é obrigatório!</p>
                                                         @enderror
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="inputDesc">Descrição</label>
-                                                        <textarea class="ckeditor form-control" id="inputDesc" name="inputDesc" rows="4" placeholder="Descrição"
-                                                            required></textarea>
+                                                        <textarea class="ckeditor form-control" id="inputDesc" name="inputDesc" rows="4" placeholder="Descrição" required></textarea>
                                                         @error('inputDesc')
                                                             <p class="text-danger">Este Campo é obrigatório!</p>
                                                         @enderror

@@ -131,6 +131,22 @@
                         </ul>
                     </div>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
+                        aria-controls="ui-basic">
+                        <i class="menu-icon mdi mdi-floor-plan"></i>
+                        <span class="menu-title">Eventos</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="ui-basic">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link"
+                                    href="{{ route('evento.create') }}">Adicionar</a>
+                            </li>
+                            <li class="nav-item"> <a class="nav-link" href="{{ route('evento') }}">Listar</a></li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
         </nav>
         <!-- partial -->
@@ -174,7 +190,12 @@
     <script src="/js/file-upload.js"></script>
     <script src="/js/typeahead.js"></script>
     <script src="/js/select2.js"></script>
+    <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
     <script>
+        $(document).ready(function() {
+            $('.ckeditor').ckeditor();
+        });
+
         $(function() {
             // Multiple images preview with JavaScript
             var multiImgPreview = function(input, imgPreviewPlaceholder) {
@@ -224,6 +245,21 @@
             $.ajax({
                 type: "delete",
                 url: "/fotos/" + foto + "/" + n,
+                data: {
+                    _token: '{{ csrf_token() }}'
+                },
+                dataType: "json",
+                success: function(response) {
+                    console.log("OK");
+                }
+            });
+        }
+
+        function deleteFotoEvento(fotoEvento, n, id) {
+            $('#' + id).remove();
+            $.ajax({
+                type: "delete",
+                url: "/fotosEventos/" + fotoEvento + "/" + n,
                 data: {
                     _token: '{{ csrf_token() }}'
                 },

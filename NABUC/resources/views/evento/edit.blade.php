@@ -12,25 +12,26 @@
                                      <div class="col-md-6 col-lg-12 grid-margin stretch-card">
                                          <div class="card">
                                              <div class="card-header">
-                                                 <h4 class="card-title">Editar Gruta</h4>
+                                                 <h4 class="card-title">Editar Evento</h4>
                                              </div>
                                              <div class="card-body">
-                                                 <form role="form" method="POST" action="/grutas/{{ $grutas->id }}"
+                                                 <form role="form" method="POST" action="/evento/{{ $eventos->id }}"
                                                      enctype="multipart/form-data">
                                                      @csrf
                                                      @method('PUT')
                                                      <div class="form-group">
-                                                         <label for="inputNome">Nome da gruta</label>
+                                                         <label for="inputNome">Nome do Evento</label>
                                                          <input type="text" class="form-control" id="inputNome"
-                                                             name="inputNome" placeholder="Nome da gruta"
-                                                             value="{{ $grutas->name }}" required>
+                                                             name="inputNome" placeholder="Nome do Evento"
+                                                             value="{{ $eventos->name }}" required>
                                                          @error('inputNome')
                                                              <p class="text-danger">Este Campo é obrigatório!</p>
                                                          @enderror
                                                      </div>
                                                      <div class="form-group">
                                                          <label for="inputDesc">Descrição</label>
-                                                         <textarea class="ckeditor form-control" id="inputDesc" name="inputDesc" rows="4" placeholder="Descrição" required>{{ $grutas->desc }}</textarea>
+                                                         <textarea class="ckeditor form-control" id="inputDesc" name="inputDesc" rows="4" placeholder="Descrição"
+                                                             required>{{ $eventos->descricao }}</textarea>
                                                          @error('inputDesc')
                                                              <p class="text-danger">Este Campo é obrigatório!</p>
                                                          @enderror
@@ -40,15 +41,15 @@
                                                          <div class="user-image mb-3 text-center">
                                                              <div class="imgPreview">
                                                                  @foreach ($name as $n)
-                                                                     @if (Storage::exists('public/images/grutas/' . $n))
+                                                                     @if (Storage::exists('public/images/eventos/' . $n))
                                                                          <span class="pic" id="{{ $loop->index }}">
                                                                              <a href="javascript:void(0)"
-                                                                                 onclick="deleteFoto('{{ $foto->id }}', '{{ $n }}', {{ $loop->index }})">
+                                                                                 onclick="deleteFotoEvento('{{ $fotoEventos->id }}', '{{ $n }}', {{ $loop->index }})">
                                                                                  <i
                                                                                      class="fas fa-times-circle close text-danger"></i>
                                                                              </a>
                                                                              <img width="200" class="img-thumnail"
-                                                                                 src="{{ asset('storage/images/grutas') . '/' . $n }}"
+                                                                                 src="{{ asset('storage/images/eventos') . '/' . $n }}"
                                                                                  alt="">
                                                                          </span>
                                                                      @endif

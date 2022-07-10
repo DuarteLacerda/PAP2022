@@ -74,9 +74,9 @@ Route::get('/bioespeleologia/quiropteros', function () {
 
 Auth::routes();
 
-Route::get('/grutas', [App\Http\Controllers\GrutasController::class, 'index'])->name('grutas');
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->middleware('auth')->name('dashboard');
 Route::get('/catalogo', [App\Http\Controllers\CatalogoController::class, 'index'])->name('catalogo');
+Route::get('/grutas', [App\Http\Controllers\GrutasController::class, 'index'])->name('grutas');
 Route::post('/grutas', [App\Http\Controllers\GrutasController::class, 'store']);
 Route::get('/grutas/create', [App\Http\Controllers\GrutasController::class, 'create'])->name('grutas.create');
 Route::get('/grutas/{grutas}', [App\Http\Controllers\GrutasController::class, 'show']);
@@ -84,3 +84,14 @@ Route::put('/grutas/{grutas}', [App\Http\Controllers\GrutasController::class, 'u
 Route::get('/grutas/edit/{grutas}', [App\Http\Controllers\GrutasController::class, 'edit']);
 Route::delete('/grutas/{grutas}', [App\Http\Controllers\GrutasController::class, 'destroy']);
 Route::delete('/fotos/{foto}/{name}', [App\Http\Controllers\FotoController::class, 'destroy']);
+
+///////////////////////////////////////////////
+
+Route::get('/evento', [App\Http\Controllers\EventosController::class, 'index'])->name('evento');
+Route::post('/evento', [App\Http\Controllers\EventosController::class, 'store']);
+Route::get('/evento/create', [App\Http\Controllers\EventosController::class, 'create'])->name('evento.create');
+Route::get('/evento/{eventos}', [App\Http\Controllers\EventosController::class, 'show']);
+Route::put('/evento/{eventos}', [App\Http\Controllers\EventosController::class, 'update']);
+Route::get('/evento/edit/{eventos}', [App\Http\Controllers\EventosController::class, 'edit']);
+Route::delete('/evento/{eventos}', [App\Http\Controllers\EventosController::class, 'destroy']);
+Route::delete('/fotosEventos/{fotoEventos}/{name}', [App\Http\Controllers\FotosEventosController::class, 'destroy']);

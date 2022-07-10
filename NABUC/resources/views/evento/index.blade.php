@@ -26,7 +26,7 @@
                                     <div class="col-md-6 col-lg-12 grid-margin stretch-card">
                                         <div class="card">
                                             <div class="card-body">
-                                                <h4 class="card-title">Grutas Listadas</h4>
+                                                <h4 class="card-title">Eventos Listados</h4>
                                                 <div class="table-responsive pt-3">
                                                     <table id="grutas" class="table table-bordered">
                                                         <thead>
@@ -40,18 +40,18 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            @foreach ($gruta as $grt)
+                                                            @foreach ($eventos as $evento)
                                                                 <tr>
-                                                                    <td>{{ $grt->id }}</td>
+                                                                    <td>{{ $evento->id }}</td>
                                                                     <td><a
-                                                                            href="/grutas/edit/{{ $grt->id }}">{{ $grt->name }}</a>
+                                                                            href="/evento/edit/{{ $evento->id }}">{{ $evento->name }}</a>
                                                                     </td>
-                                                                    <td>{{ $grt->desc }}</td>
-                                                                    <td>{{ $grt->created_at }}</td>
-                                                                    <td>{{ $grt->updated_at }}</td>
+                                                                    <td>{{ $evento->descricao }}</td>
+                                                                    <td>{{ $evento->created_at }}</td>
+                                                                    <td>{{ $evento->updated_at }}</td>
                                                                     <td class="text-center">
                                                                         <form role="form"
-                                                                            action="/grutas/{{ $grt->id }}"
+                                                                            action="/evento/{{ $evento->id }}"
                                                                             method="post">
                                                                             @csrf
                                                                             @method('DELETE')
