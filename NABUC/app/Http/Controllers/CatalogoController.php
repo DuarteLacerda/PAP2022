@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Foto;
 use App\Models\Gruta;
+use Illuminate\Support\Facades\DB;
 
 class CatalogoController extends Controller
 {
@@ -15,13 +16,18 @@ class CatalogoController extends Controller
      */
     public function index()
     {
-        $grutas = Gruta::all();
+        $grutas = DB::table('grutas')
+        ->leftJoin('fotos', 'grutas.id', '=', 'gruta_id')
+        ->select('grutas.*', 'fotos.name as fotodes')
+        ->get();
         /* $fotos = Foto::all();
         if ($fotos) {
             $name = json_decode($fotos->name);
         } else {
             $name = [];
         } */
+        
+
         return view('catalogo', compact('grutas'));
     }
 }

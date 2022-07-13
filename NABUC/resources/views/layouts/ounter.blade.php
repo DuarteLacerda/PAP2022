@@ -79,7 +79,13 @@
                         echo 'Boa Noite,';
                     }
                     ?> <span class="text-black fw-bold"></span></h1>
-                    <h3 class="welcome-sub-text">{{ Auth::User()->name }}</h3>
+                    <h3 class="welcome-sub-text">
+                        @auth
+                            {{ Auth::User()->name }}
+                        @endauth
+
+
+                    </h3>
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto">
@@ -91,9 +97,13 @@
                         <div class="dropdown-header text-center">
                             <img class="img-md rounded-circle" src="/images/faces/face8.jpg" alt="Profile image">
                         </div>
-                        <strong>{{ Auth::User()->name }}</strong>
+                        <strong>
+                            @auth
+                                {{ Auth::User()->name }}
+                            @endauth
+                        </strong>
                         <a href="#" class="dropdown-item">
-                            <i <i class="fas fa-user text-primary me-2"></i></i>Profile
+                            <i class="fas fa-user text-primary me-2"></i>Profile
                         </a>
                         <a href="{{ Auth::logout() }}" class="dropdown-item">
                             <i class="fas fa-power-off text-primary me-2"></i>Sign Out

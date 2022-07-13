@@ -15,7 +15,7 @@
                                                  <h4 class="card-title">Editar Gruta</h4>
                                              </div>
                                              <div class="card-body">
-                                                 <form role="form" method="POST" action="/grutas/{{ $grutas->id }}"
+                                                 <form role="form" method="POST" action="/grutas/{{ $gruta->id }}"
                                                      enctype="multipart/form-data">
                                                      @csrf
                                                      @method('PUT')
@@ -23,14 +23,14 @@
                                                          <label for="inputNome">Nome da gruta</label>
                                                          <input type="text" class="form-control" id="inputNome"
                                                              name="inputNome" placeholder="Nome da gruta"
-                                                             value="{{ $grutas->name }}" required>
+                                                             value="{{ $gruta->name }}" required>
                                                          @error('inputNome')
                                                              <p class="text-danger">Este Campo é obrigatório!</p>
                                                          @enderror
                                                      </div>
                                                      <div class="form-group">
                                                          <label for="inputDesc">Descrição</label>
-                                                         <textarea class="ckeditor form-control" id="inputDesc" name="inputDesc" rows="4" placeholder="Descrição" required>{{ $grutas->desc }}</textarea>
+                                                         <textarea class="ckeditor form-control" id="inputDesc" name="inputDesc" rows="4" placeholder="Descrição" required>{{ $gruta->desc }}</textarea>
                                                          @error('inputDesc')
                                                              <p class="text-danger">Este Campo é obrigatório!</p>
                                                          @enderror

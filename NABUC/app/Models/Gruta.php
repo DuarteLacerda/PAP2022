@@ -10,8 +10,8 @@ class Gruta extends Model
 {
     use HasFactory;
 
-    public function fotos()
+/*     public function foto()
     {
         return $this->hasMany(Foto::class);
-    }
+    } */
 }

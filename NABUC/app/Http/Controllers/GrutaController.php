@@ -92,8 +92,15 @@ class GrutaController extends Controller
     public function show(Gruta $gruta)
     {
         //
-        $foto = Foto::where('gruta_id', $gruta->id)->first();
-        return view('grutas.show', compact('gruta', 'foto'));
+
+        $fotos = DB::table('grutas')
+        ->leftJoin('fotos', 'grutas.id', '=', 'gruta_id')
+        ->select('fotos.name as fotodes')
+        ->where('grutas.id',$gruta->id)
+        ->get();
+
+
+        return view('grutas.show', compact('gruta','fotos'));
     }
 
     /**
@@ -112,6 +119,7 @@ class GrutaController extends Controller
             $name = [];
         }
 
+        
         return view('grutas.edit', compact('gruta', 'foto', 'name'));
     }
 
