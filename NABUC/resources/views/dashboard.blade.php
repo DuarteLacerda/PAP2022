@@ -14,10 +14,15 @@
                                             <div class="card-body">
                                                 <div class="row">
                                                     <div class="col-sm text-center">
-                                                        <h4 class="mb-0 fw-bold"><?php echo date('d-m-Y'); ?></h4>
+                                                        <h4 class="mb-0 fw-bold">
+                                                            <?php date_default_timezone_set('Europe/Lisbon');
+                                                            echo date('d-m-Y'); ?>
+                                                        </h4>
                                                     </div>
                                                     <div class="col-sm text-center">
-                                                        <h4 class="mb-0 fw-bold">♡*+:•*∴”:♡.•♬✧♡*+:•*∴”:♡.•♬✧</h4>
+                                                        <h4 class="mb-0 fw-bold">✧♬•.♡:”∴*•:+*
+                                                            <strong style="font-size: 24px">NABUC</strong> *+:•*∴”:♡.•♬✧
+                                                        </h4>
                                                     </div>
                                                     <div class="col-sm text-center">
                                                         <h4 class="mb-0 fw-bold"><?php echo date('H:i'); ?></h4>

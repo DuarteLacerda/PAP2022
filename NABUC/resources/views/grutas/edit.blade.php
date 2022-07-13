@@ -49,7 +49,7 @@
                                                                              </a>
                                                                              <img width="200" class="img-thumnail"
                                                                                  src="{{ asset('storage/images/grutas') . '/' . $n }}"
-                                                                                 alt="">
+                                                                                 alt="Preview">
                                                                          </span>
                                                                      @endif
                                                                  @endforeach

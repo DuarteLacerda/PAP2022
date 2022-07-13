@@ -6,9 +6,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 
-class Grutas extends Model
+class Gruta extends Model
 {
     use HasFactory;
+
     public function fotos()
     {
         return $this->hasMany(Foto::class);

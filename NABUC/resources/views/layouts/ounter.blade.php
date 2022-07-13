@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <meta charset="UTF-8" http-equiv="accept-language" content="pt, en">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>NABUC Dashboard</title>
     <!-- plugins:css -->
@@ -69,17 +69,17 @@
             <ul class="navbar-nav">
                 <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
                     <h1 class="welcome-text"><?php
+                    date_default_timezone_set('Europe/Lisbon');
                     $time = date('H');
-                    $timezone = date('e');
-                    if ($time >= '06' && $time < '13') {
+                    if ($time >= '00' && $time < '12') {
                         echo 'Bom Dia,';
-                    } elseif ($time >= '13' && $time < '20') {
+                    } elseif ($time >= '12' && $time < '20') {
                         echo 'Boa Tarde,';
-                    } elseif ($time >= '20' && $time < '06') {
+                    } elseif ($time >= '20' && $time < '24') {
                         echo 'Boa Noite,';
                     }
                     ?> <span class="text-black fw-bold"></span></h1>
-                    <h3 class="welcome-sub-text">Espero que esteja a correr tudo bem.</h3>
+                    <h3 class="welcome-sub-text">{{ Auth::User()->name }}</h3>
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto">
@@ -91,8 +91,12 @@
                         <div class="dropdown-header text-center">
                             <img class="img-md rounded-circle" src="/images/faces/face8.jpg" alt="Profile image">
                         </div>
+                        <strong>{{ Auth::User()->name }}</strong>
+                        <a href="#" class="dropdown-item">
+                            <i <i class="fas fa-user text-primary me-2"></i></i>Profile
+                        </a>
                         <a href="{{ Auth::logout() }}" class="dropdown-item">
-                            <i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out
+                            <i class="fas fa-power-off text-primary me-2"></i>Sign Out
                         </a>
                     </div>
                 </li>
@@ -132,13 +136,13 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
-                        aria-controls="ui-basic">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false"
+                        aria-controls="icons">
                         <i class="menu-icon mdi mdi-floor-plan"></i>
                         <span class="menu-title">Eventos</span>
                         <i class="menu-arrow"></i>
                     </a>
-                    <div class="collapse" id="ui-basic">
+                    <div class="collapse" id="icons">
                         <ul class="nav flex-column sub-menu">
                             <li class="nav-item"><a class="nav-link"
                                     href="{{ route('evento.create') }}">Adicionar</a>

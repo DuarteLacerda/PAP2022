@@ -46,7 +46,7 @@
                                                                     <td><a
                                                                             href="/grutas/edit/{{ $grt->id }}">{{ $grt->name }}</a>
                                                                     </td>
-                                                                    <td>{{ $grt->desc }}</td>
+                                                                    <td>{{ strip_tags($grt->desc) }}</td>
                                                                     <td>{{ $grt->created_at }}</td>
                                                                     <td>{{ $grt->updated_at }}</td>
                                                                     <td class="text-center">

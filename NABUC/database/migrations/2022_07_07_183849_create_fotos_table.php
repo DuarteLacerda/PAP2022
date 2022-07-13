@@ -15,10 +15,9 @@ return new class extends Migration
     {
         Schema::create('fotos', function (Blueprint $table) {
             $table->id();
-            $table->string('designação');
-            $table->string('caminho');
-            $table->unsignedBigInteger('grutas_id');
-            $table->foreign('grutas_id')
+            $table->string('name');
+            $table->unsignedBigInteger('gruta_id');
+            $table->foreign('gruta_id')
                 ->references('id')
                 ->on('grutas')
                 ->onDelete('cascade');

@@ -11,7 +11,8 @@ class Foto extends Model
     protected $fillable = [
         'name'
     ];
-    public function grutas(){
-        return $this->belongsTo(Grutas::class);
+    public function gruta()
+    {
+        return $this->belongsTo(Gruta::class);
     }
 }
