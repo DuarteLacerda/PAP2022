@@ -79,7 +79,7 @@ Route::get('/catalogo', [App\Http\Controllers\CatalogoController::class, 'index'
 Route::get('/grutas', [App\Http\Controllers\GrutaController::class, 'index'])->middleware('auth')->name('grutas');
 Route::post('/grutas', [App\Http\Controllers\GrutaController::class, 'store']);
 Route::get('/grutas/create', [App\Http\Controllers\GrutaController::class, 'create'])->middleware('auth')->name('grutas.create');
-Route::get('/grutas/show/{gruta}', [App\Http\Controllers\GrutaController::class, 'show']);
+Route::get('/grutas/{gruta}', [App\Http\Controllers\GrutaController::class, 'show']);
 Route::put('/grutas/{gruta}', [App\Http\Controllers\GrutaController::class, 'update']);
 Route::get('/grutas/edit/{gruta}', [App\Http\Controllers\GrutaController::class, 'edit']);
 Route::delete('/grutas/{gruta}', [App\Http\Controllers\GrutaController::class, 'destroy']);

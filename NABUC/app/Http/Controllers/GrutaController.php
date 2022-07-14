@@ -95,7 +95,7 @@ class GrutaController extends Controller
 
         $fotos = DB::table('grutas')
         ->leftJoin('fotos', 'grutas.id', '=', 'gruta_id')
-        ->select('fotos.name as fotodes')
+        ->select('fotos.name')
         ->where('grutas.id',$gruta->id)
         ->get();
 

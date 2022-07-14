@@ -17,7 +17,7 @@
                             display: -webkit-box;
                             -webkit-line-clamp: 8;
                             -webkit-box-orient: vertical;">
-                                {{ $gruta->desc }}</h5>
+                                {!! $gruta->desc !!}</h5>
                             <button type="submit" class="btn" style="background-color: #484847; color: white;">Ver
                                 Mais</button>
                         </div>
