@@ -75,13 +75,15 @@ Route::get('/bioespeleologia/quiropteros', function () {
 Auth::routes();
 
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->middleware('auth')->name('dashboard');
+Route::get('/profile', [App\Http\Controllers\UserController::class, 'index'])->middleware('auth')->name('profile');
 Route::get('/catalogo', [App\Http\Controllers\CatalogoController::class, 'index'])->name('catalogo');
+Route::get('/eventosCatalogo', [App\Http\Controllers\EventosCatalogoController::class, 'index'])->name('eventosCatalogo');
 Route::get('/grutas', [App\Http\Controllers\GrutaController::class, 'index'])->middleware('auth')->name('grutas');
 Route::post('/grutas', [App\Http\Controllers\GrutaController::class, 'store']);
 Route::get('/grutas/create', [App\Http\Controllers\GrutaController::class, 'create'])->middleware('auth')->name('grutas.create');
 Route::get('/grutas/{gruta}', [App\Http\Controllers\GrutaController::class, 'show']);
 Route::put('/grutas/{gruta}', [App\Http\Controllers\GrutaController::class, 'update']);
-Route::get('/grutas/edit/{gruta}', [App\Http\Controllers\GrutaController::class, 'edit']);
+Route::get('/grutas/edit/{gruta}', [App\Http\Controllers\GrutaController::class, 'edit'])->middleware('auth');
 Route::delete('/grutas/{gruta}', [App\Http\Controllers\GrutaController::class, 'destroy']);
 Route::delete('/fotos/{foto}/{name}', [App\Http\Controllers\FotoController::class, 'destroy']);
 

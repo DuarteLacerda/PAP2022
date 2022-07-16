@@ -8,16 +8,14 @@
                 <h2 class="desc-cong">
                     <br><br>
                     Durante os dias 31 de Março a 2 de Abril de 2017 a Associação Amigos do Planalto das Cesaredas em
-                    parceria
-                    com a Faculdade de Ciências e Tecnologia da Universidade Nova de Lisboa, levaram a cabo o 1º Congresso
-                    sobre
-                    o Planalto das Cesaredas que decorreu no Auditório Municipal da Lourinhã onde foram abordadas uma
-                    panóplia
-                    de temáticas (Geologia, Geomorfologia, Paleontologia, e Arqueologia, Espeleologia, Fauna, Ambiente,
-                    Património, História, Costumes, Demografia, Ambiente, Atividades Económicas e Cultura) acompanhado de
-                    uma
-                    comissão científica constituída por José Carlos Kullberg, Luís Raposo, Sofia Reboleira, Fernando
-                    Reboredo,
+                    parceria com a Faculdade de Ciências e Tecnologia da Universidade Nova de Lisboa, levaram a cabo o 1º
+                    Congresso
+                    sobre o Planalto das Cesaredas que decorreu no Auditório Municipal da Lourinhã onde foram abordadas uma
+                    panóplia de temáticas (Geologia, Geomorfologia, Paleontologia, e Arqueologia, Espeleologia, Fauna,
+                    Ambiente, Património, História, Costumes, Demografia, Ambiente, Atividades Económicas e Cultura)
+                    acompanhado de
+                    uma comissão científica constituída por José Carlos Kullberg, Luís Raposo, Sofia Reboleira, Fernando
+                    Reboredo, <br>
                     Bruno Pereira e Octávio Mateus.
                     <br>
                     Este Congresso em formato de conferência tem como objetivo a realização de um livro com o Prof. Octávio
@@ -34,8 +32,8 @@
                     <br><br>
                     O Planalto das Cesaredas é detentor de um património geológico (particularmente espeleológico e
                     paleontológico), arqueológico, biológico e etnográfico de grande importância para o oeste. Esta
-                    estrutura
-                    aplanada, de características carbonatadas, que se divide entre os concelhos de Lourinhã, Óbidos, Peniche
+                    estrutura aplanada, de características carbonatadas, que se divide entre os concelhos de Lourinhã,
+                    Óbidos, Peniche
                     e
                     Bombarral, é o centro da atividade do Núcleo de Amigos dos Buracos das Cesaredas (NABUC). O NABUC surge
                     em
@@ -86,13 +84,13 @@
                     <br><br>
                 </h2>
                 <h2>Carla Alexandra Tomás</h2>
-                <p>(Geóloga)</p>
+                <h5>(Geóloga)</h5>
                 <br>
                 <h2>Sérgio Pinheiro</h2>
-                <p>(Arqueólogo)</p>
+                <h5>(Arqueólogo)</h5>
                 <br>
                 <h2>João Figueiredo</h2>
-                <p>(Espeleólogo)</p>
+                <h5>(Espeleólogo)</h5>
                 <br><br>
                 </h2>
             </div>

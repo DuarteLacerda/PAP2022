@@ -93,7 +93,14 @@ class EventosController extends Controller
     public function show(Eventos $eventos)
     {
         //
-        return view('grutas.show', compact('eventos'));
+        $fotos_eventos = DB::table('eventos')
+            ->leftJoin('fotos_eventos', 'eventos.id', '=', 'eventos_id')
+            ->select('fotos_eventos.name')
+            ->where('eventos.id', $eventos->id)
+            ->get();
+
+
+        return view('evento.show', compact('eventos', 'fotos_eventos'));
     }
 
     /**

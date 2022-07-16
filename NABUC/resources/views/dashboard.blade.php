@@ -38,7 +38,8 @@
                                             <div class="card-body">
                                                 <h4 class="card-title">Grutas Listadas</h4>
                                                 <div class="table-responsive pt-3">
-                                                    <table id="grutas" class="table table-bordered">
+                                                    <table style='white-space:nowrap' id="grutas"
+                                                        class="table vertical-align: middle table-hover">
                                                         <thead>
                                                             <tr>
                                                                 <th>Id</th>
@@ -55,7 +56,7 @@
                                                                     <td><a
                                                                             href="/grutas/edit/{{ $grt->id }}">{{ $grt->name }}</a>
                                                                     </td>
-                                                                    <td>{{ $grt->desc }}</td>
+                                                                    <td>{!! $grt->desc !!}</td>
                                                                     <td>{{ $grt->created_at }}</td>
                                                                     <td>{{ $grt->updated_at }}</td>
                                                                 </tr>
@@ -73,7 +74,7 @@
                                             <div class="card-body">
                                                 <h4 class="card-title">Eventos Listados</h4>
                                                 <div class="table-responsive pt-3">
-                                                    <table id="grutas" class="table table-bordered">
+                                                    <table id="grutas" class="table vertical-align: middle table-hover">
                                                         <thead>
                                                             <tr>
                                                                 <th>Id</th>
@@ -90,7 +91,7 @@
                                                                     <td><a
                                                                             href="/evento/edit/{{ $evento->id }}">{{ $evento->name }}</a>
                                                                     </td>
-                                                                    <td>{{ $evento->descricao }}</td>
+                                                                    <td>{!! $evento->descricao !!}</td>
                                                                     <td>{{ $evento->created_at }}</td>
                                                                     <td>{{ $evento->updated_at }}</td>
                                                                 </tr>

@@ -83,8 +83,6 @@
                         @auth
                             {{ Auth::User()->name }}
                         @endauth
-
-
                     </h3>
                 </li>
             </ul>
@@ -95,18 +93,16 @@
                         <img class="img-xs rounded-circle" src="/images/faces/face8.jpg" alt="Profile image"> </a>
                     <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                         <div class="dropdown-header text-center">
-                            <img class="img-md rounded-circle" src="/images/faces/face8.jpg" alt="Profile image">
+                            <strong>{{ Auth::User()->name }}</strong>
                         </div>
-                        <strong>
-                            @auth
-                                {{ Auth::User()->name }}
-                            @endauth
-                        </strong>
-                        <a href="#" class="dropdown-item">
-                            <i class="fas fa-user text-primary me-2"></i>Profile
+                        <div class="dropdown-header text-center">
+                            <strong>{{ Auth::User()->email }}</strong>
+                        </div>
+                        <a href="/profile" class="dropdown-item">
+                            <i class="fas fa-user text-primary me-2"></i>Perfil
                         </a>
                         <a href="{{ Auth::logout() }}" class="dropdown-item">
-                            <i class="fas fa-power-off text-primary me-2"></i>Sign Out
+                            <i class="fas fa-power-off text-primary me-2"></i>Desconectar
                         </a>
                     </div>
                 </li>
@@ -124,16 +120,16 @@
             <ul class="nav">
                 <li class="nav-item">
                     <a class="nav-link" href="/dashboard">
-                        <i class="mdi mdi-grid-large menu-icon"></i>
-                        <span class="menu-title">Dashboard</span>
+                        <i class="fas fa-chart-line"></i>
+                        <span class="menu-title"> Dashboard</span>
                     </a>
                 </li>
                 <li class="nav-item nav-category">Catalogo</li>
                 <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
                         aria-controls="ui-basic">
-                        <i class="menu-icon mdi mdi-floor-plan"></i>
-                        <span class="menu-title">Grutas</span>
+                        <i class="fas fa-mountain"></i>
+                        <span class="menu-title"> Grutas</span>
                         <i class="menu-arrow"></i>
                     </a>
                     <div class="collapse" id="ui-basic">
@@ -148,8 +144,8 @@
                 <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false"
                         aria-controls="icons">
-                        <i class="menu-icon mdi mdi-floor-plan"></i>
-                        <span class="menu-title">Eventos</span>
+                        <i class="fas fa-layer-group"></i>
+                        <span class="menu-title"> Eventos</span>
                         <i class="menu-arrow"></i>
                     </a>
                     <div class="collapse" id="icons">

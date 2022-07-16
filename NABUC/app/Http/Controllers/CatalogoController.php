@@ -17,16 +17,9 @@ class CatalogoController extends Controller
     public function index()
     {
         $grutas = DB::table('grutas')
-        ->leftJoin('fotos', 'grutas.id', '=', 'gruta_id')
-        ->select('grutas.*', 'fotos.name as fotodes')
-        ->get();
-        /* $fotos = Foto::all();
-        if ($fotos) {
-            $name = json_decode($fotos->name);
-        } else {
-            $name = [];
-        } */
-        
+            ->leftJoin('fotos', 'grutas.id', '=', 'gruta_id')
+            ->select('grutas.*', 'fotos.name as fotodes')
+            ->get();
 
         return view('catalogo', compact('grutas'));
     }

@@ -28,7 +28,7 @@
                                             <div class="card-body">
                                                 <h4 class="card-title">Grutas Listadas</h4>
                                                 <div class="table-responsive pt-3">
-                                                    <table id="grutas" class="table table-bordered">
+                                                    <table id="grutas" class="table table-bordered table-hover">
                                                         <thead>
                                                             <tr>
                                                                 <th>Id</th>
@@ -39,14 +39,14 @@
                                                                 <th>Eliminar</th>
                                                             </tr>
                                                         </thead>
-                                                        <tbody>
+                                                        <tbody class="table-group-divider">
                                                             @foreach ($gruta as $grt)
                                                                 <tr>
                                                                     <td>{{ $grt->id }}</td>
                                                                     <td><a
                                                                             href="/grutas/edit/{{ $grt->id }}">{{ $grt->name }}</a>
                                                                     </td>
-                                                                    <td>{{ strip_tags($grt->desc) }}</td>
+                                                                    <td style="margin: 150px">{!! $grt->desc !!}</td>
                                                                     <td>{{ $grt->created_at }}</td>
                                                                     <td>{{ $grt->updated_at }}</td>
                                                                     <td class="text-center">

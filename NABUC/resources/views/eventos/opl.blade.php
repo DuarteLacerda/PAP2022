@@ -15,7 +15,7 @@
                     <br><br>
                 </h2>
                 <img class="img-opl" src="../images/igreja1.jpg" alt="Igreja">
-                <p>Data de criação: 30-05-2016</p>
+                <h5>Data de criação: 30-05-2016</h5>
                 <h2 class="desc-opl">
                     <br>
                     Área Temática: Cultura
@@ -57,10 +57,10 @@
                 </h3>
                 <div class="row">
                     <div class=" video-opl"">
-                            <iframe width=" 400" height="360" src="https://www.youtube.com/embed/TSs-PWNJlks"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
+                        <iframe width=" 400" height="360" src="https://www.youtube.com/embed/TSs-PWNJlks"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
                         </iframe>
                         <iframe width="400" height="360" src="https://www.youtube.com/embed/sBQdesMIpBc"
                             title="YouTube video player" frameborder="0"

@@ -146,7 +146,7 @@
                 Religioso e Militar e esquece sítios arqueológicos importantíssimos como, por exemplo, o sitio da Tholos
                 de
                 Paimogo.
-                <br>
+                <br><br>
                 A Rota do Planalto das Cesaredas carece de esclarecimentos sobre o Património Arqueológico. Realça as
                 componentes paisagística e rural do planalto, mas não menciona sequer achados importantes como a
                 Necrópole
@@ -175,6 +175,7 @@
                 parcial, devido ao seu aterro durante os trabalhos finais de terraplanagem da construção do Parque
                 Eólico da
                 Lourinhã;
+                <br><br>
                 PA03 – Cova da Presa – Esta cavidade encontra-se inserida no complexo cársico da Maceira denominado de
                 “Grutas do Cabeço da Pedra do Sino”, tendo inclusivé sido alvo de publicação e descrição pela
                 AESDA-Associação de Estudos Subterrâneos e Defesa do Ambiente no nº 4 do Trogle, de Agosto de 2002. São
@@ -183,12 +184,12 @@
                 Pinha,
                 Gruta da Pedra do Sino II, mencionadas na publicação acima referida. As mesmas cavidades foram ainda
                 mencionadas na publicação da mesma associação, Trogle nº5, de Maio de 2007 sendo esta ultima publicação
-                direccionada aos achados arqueológicos da Cova da Presa.
+                direccionada aos achados arqueológicos da Cova da Presa.<br><br>
                 PA12 – Lapa do Reguengo Grande – Não temos conhecimento da existência de uma gruta com este nome.
                 Questionamos se não haverá um equívoco com a gruta Lapa do Reguengo Pequeno, já que esta (visitada e
                 estudada por nós com o devido relatório para a DGPC, bem como para a Câmara Municipal da Lourinhã) não
                 se
-                encontra listada;
+                encontra listada;<br><br>
                 PA13 – Gruta 2 – Esta cavidade carece de um trabalho de relocalização, visto que as coordenadas
                 geográficas
                 existentes no Endovélico não estão corretas, contudo, temos registado e devidamente reportado para a
@@ -197,19 +198,19 @@
                 testemunho
                 do proprietário do terreno, onde a coordenada se encontra registada no presente Plano Director
                 Municipal,
-                mas ainda por confirmar a exata georreferência;
+                mas ainda por confirmar a exata georreferência;<br><br>
                 PA14 – Cezareda – Pressupomos que esta cavidade seja a mesma referida no texto introdutório do
                 Património
                 Arqueológico e sobre o qual já apresentámos uma reflexão, baseada na descrição da cavidade apresentada
                 no
-                Endovélico “embora sem confirmação do local preciso da sua proveniência.”(7);
+                Endovélico “embora sem confirmação do local preciso da sua proveniência.”(7);<br><br>
                 PA17 – Lapa Furada – Esta cavidade, estudada em 1867 por Nery Delgado, necessita de uma verificação das
                 suas
                 coordenadas, visto que a descrição do autor não coincide com a actual coordenada existente no
                 Endovélico. Os
                 estudos que de momento efetuamos, indicam que esta cavidade encontra-se já no concelho de Óbidos mas
                 perto
-                do limite fronteiriço concelhio, junto ao Casal da Lagoa, Cesaredas;
+                do limite fronteiriço concelhio, junto ao Casal da Lagoa, Cesaredas;<br><br>
                 PA19 – Não sendo muito claro e pondo em dúvida a veracidade da georreferenciação, podemos pressupor que
                 esta
                 coordenada possa ser referente a uma das seguintes cavidades: Algar da Columbeira, Gruta do Meio, Gruta
@@ -218,13 +219,13 @@
                 encontrar
                 dentro do concelho, a entrada da cavidade está já dentro do concelho do Bombarral e está identificada
                 com o
-                CNS-1154.
+                CNS-1154.<br><br>
                 PA20 – Gruta da Água – Esta cavidade encontra-se noutro concelho, mais especificamente no Concelho do
                 Bombarral, estando inclusivé referenciada no Endovélico com o CNS-4779, esta mesma cavidade encontra-se
                 interligada fisicamente com outras duas cavidades (Gruta do Meio e Algar da Columbeira) ao qual
                 poderemos
                 considerar parte do complexo cársico do Vale Roto, sendo esta uma cavidade peculiar do Planalto das
-                Cesaredas visto que é a única cavidade que apresenta um nível freático próprio (3);
+                Cesaredas visto que é a única cavidade que apresenta um nível freático próprio (3);<br><br>
                 PA29 – Gruta do Algar das Cesaredas – Esta gruta localiza-se no Extremo do Concelho da Lourinhã, contudo
                 será importante referir que o desenvolvimento desta cavidade prolonga-se para o concelho de Óbidos. É de
                 salientar que não só é importante conhecer a localização do património, mas no que se refere a
@@ -235,19 +236,19 @@
                 900 Metros, a “Gruta dos Alfaiates” em que, a parte da cavidade ainda preservada apresenta cerca de 480
                 Metros de desenvolvimento ou a “Lapa do Reguengo Pequeno” com mais de 100 Metros de desenvolvimento
                 total.
-                <br>
+                <br><br>
                 Também consideramos omisso o registo de uma cavidade mencionada no Relatório Anual de actividades de
                 2010 do
                 GEAL-Grupo de Etnologia e Arqueologia da Lourinhã, presente em assembleia geral da associação acima
                 referida
                 a 20 de Março de 2011 (5), onde se encontra referido no parágrafo referente a Arqueologia (pag.9):
-                <br>
+                <br><br>
                 “A- prospecção e Limpeza de uma gruta situada na freguesia de Moledo, Lourinhã, A gruta foi descoberta
                 por
                 um particular, na sua propriedade, tendo a prospecção decorrido de 5 a 9 de Julho, dirigida por Horácio
                 Mateus e Isabel Mateus, nela participando os Voluntários do Campo de Trabalho Internacional.
                 Encontraram-se
-                ossos de animal e pedaços de Cerâmica.”
+                ossos de animal e pedaços de Cerâmica.”<br>
                 Considerando o acima descrito presumimos que, caso tenham sido realizados mais trabalhos arqueológicos
                 no
                 concelho, por parte do GEAL-Grupo de Etnologia e Arqueologia da Lourinhã, deveriam constar na Revisão do
@@ -260,7 +261,7 @@
                 43 ocorrências por parte da prospecção arqueológica/espeleológica entre as quais são referidas: Algares,
                 Diaclases, Poços, Fornos, povoados e Muros estando presentes na Revisão do Plano Director Municipal da
                 Lourinhã apenas as ocorrências registadas no Endovélico, consideramos as restantes omissas.
-                <br>
+                <br><br>
                 Aquando da nossa colaboração, requerida informalmente pela Câmara Municipal da Lourinhã, verificámos que
                 a
                 metodologia praticada não era de todo a mais aferida, consequentemente, ficaram algumas cavidades por
@@ -270,7 +271,7 @@
                 Somas, Gruta do Leitão, Lapa Das Pombas, Moledo VI, Moledo VII, Moledo VIII, Moledo IX, Moledo X, Moledo
                 XI,
                 Gruta do Casalinho, Lapa da Cabrita, Lapa da Pena Seca, Lapa do Reguengo Pequeno II e Gruta da cabra.
-                <br>
+                <br><br>
                 Fazendo uma breve análise ao livro referido na nota introdutória, do parágrafo alusivo aos Estudos de
                 caracterização - Património Arqueológico da Revisão do Plano Director Municipal da Lourinhã (“Da
                 existência
@@ -280,7 +281,7 @@
                 qualquer
                 das duas grutas que descrevemos, a que é conhecida pelo nome Cova da Moura apresenta também bastante
                 interesse, pela posição especial que ocupa e pelos abundantes restos humanos que d’ella se extraíram.
-                <br>
+                <br><br>
                 Como se percebe pelo nome que tem, esta gruta era também conhecida desde muito tempo, e algumas vezes
                 ali
                 iriam os pastores acolher-se da chuva em ocasião de tempestade, para o que ella oferece um commodo
@@ -296,7 +297,7 @@
                 científico da
                 actualidade e, em simultâneo, a sua classificação como Imóvel de Interesse Municipal se não mesmo
                 Publico.
-                <br>
+                <br><br>
                 Em suma, refletindo sobre uma análise geográfica baseada em ampla informação, bem como a expectativa de
                 um
                 maior número de ocupações antrópicas e, por consequência, a credível existência em perfeita
@@ -308,7 +309,7 @@
                 e/ou
                 cultural, como também pela sua beleza paisagística, de grande importância ecológica e ambiental que,
                 claramente, se pode classificar como frágil e inigualável.
-                <br>
+                <br><br>
                 Sendo primordial a sua preservação e conservação, reconhecemos a necessidade da criação de um
                 paralelismo
                 socioeconómico a incidir na captação de turismo e lazer, constituindo, também ,uma fonte de incentivo
@@ -322,7 +323,7 @@
                 paleontológico
                 por vezes monumental e uma morfologia subterrânea, caracterizada pela presença de grutas de beleza quase
                 únicas, e dois importantes aquíferos nacionais.
-                <br>
+                <br><br>
                 Nestes termos, devido à premente necessidade de serem corrigidos os erros e omissões que, notoriamente,
                 se
                 verificam nos elementos que acompanham o Plano Director Municipal da Lourinhã, alguns aqui identificados
@@ -381,7 +382,7 @@
                 pelas igrejas e capelas do concelho deverá ser considerado, como é o caso da pintura seiscentista da
                 igreja
                 do Toxofal de Baixo.
-                <br>
+                <br><br>
                 Além do importante acervo de património pictórico, é de destacar com igual relevo o acervo escultórico
                 móvel, que, referido sucintamente como “Estatuária Sacra diversa”na secção C) de “11.outros bens a
                 salvaguardar-património cultural móvel de interesse histórico-artístico” (pág.19) merece maior destaque,
@@ -399,7 +400,7 @@
                 indumentária religiosa e o espólio das alfaias e outros objectos litúrgicos e espécimes votivos que
                 assumem
                 igualmente grande interesse estético e documental a salvaguardar.
-                <br>
+                <br><br>
                 Assim, cremos que na secção supracitada (11.C)) deverão constar os espécimes de maior relevo
                 histórico-artístico do nosso concelho, constituindo as tipologias de património cultural móvel
                 escultórico,
@@ -408,7 +409,7 @@
                 descriminando por tipologias as peças de maior relevo, dada a sua importância histórico-artística a
                 nível
                 nacional:
-                <br>
+                <br><br>
                 Pinturas pertencentes à Igreja do Convento de Santo António da Lourinhã
                 Anunciação (séc. XVI) - atribuída ao Mestre de Arruda dos Vinhos
                 Adoração dos Pastores (séc. XVI) - atribuída ao Mestre de Arruda dos Vinhos
@@ -418,7 +419,7 @@
                 Santa Paula (séc. XVII) - atribuída a Josefa de Óbidos
                 Santa Eustóquia (séc. XVII) - atribuída a Josefa de Óbidos
                 14 estações da Via Sacra (sécs. XVIII/XIX) - Autor desconhecido
-                <br>
+                <br><br>
                 Pinturas pertencentes à Santa Casa da Misericórdia da Lourinhã
                 S. João Baptista no deserto (séc. XVI) - atribuída ao Mestre da Lourinhã
                 S. João Evangelista em Patmos (séc. XVI) - atribuída ao Mestre da Lourinhã

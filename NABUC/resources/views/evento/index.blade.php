@@ -46,7 +46,7 @@
                                                                     <td><a
                                                                             href="/evento/edit/{{ $evento->id }}">{{ $evento->name }}</a>
                                                                     </td>
-                                                                    <td>{{ strip_tags($evento->descricao) }}</td>
+                                                                    <td>{!! $evento->descricao !!}</td>
                                                                     <td>{{ $evento->created_at }}</td>
                                                                     <td>{{ $evento->updated_at }}</td>
                                                                     <td class="text-center">

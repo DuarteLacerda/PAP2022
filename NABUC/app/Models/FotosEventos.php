@@ -11,8 +11,9 @@ class FotosEventos extends Model
     protected $fillable = [
         'name'
     ];
-    public function eventos()
+
+    /* public function eventos()
     {
         return $this->belongsTo(Eventos::class);
-    }
+    } */
 }
