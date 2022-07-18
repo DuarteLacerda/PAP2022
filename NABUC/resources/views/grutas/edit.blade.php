@@ -55,16 +55,10 @@
                                                                  @endforeach
                                                              </div>
                                                          </div>
-                                                         <div class="input-group">
-                                                             <div class="custom-file">
-                                                                 <input type="file" class="custom-file-input"
-                                                                     id="images" name="imageFile[]" multiple="multiple">
-                                                                 <label class="custom-file-label" for="images">Insira uma
-                                                                     imagem</label>
-                                                             </div>
-                                                             <div class="input-group-append">
-                                                                 <span class="input-group-text">Upload</span>
-                                                             </div>
+                                                         <div class="input-group mb-3">
+                                                             <input type="file" class="form-control" id="images"
+                                                                 name="imageFile[]" multiple="multiple">
+                                                             <label class="input-group-text" for="images">Upload</label>
                                                          </div>
                                                      </div>
                                                      <button type="submit" class="btn btn-success me-2">Enviar</button>

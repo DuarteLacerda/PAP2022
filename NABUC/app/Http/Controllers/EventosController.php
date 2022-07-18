@@ -78,7 +78,7 @@ class EventosController extends Controller
         } else {
             $imgData = [];
         }
-        $fileModal->name = json_encode($imgData);
+        $fileModal->designacao = json_encode($imgData);
         $fileModal->eventos_id = $eventos->id;
         $fileModal->save();
         return redirect('/evento')->with('message', 'Evento inserido com sucesso!');
@@ -95,7 +95,7 @@ class EventosController extends Controller
         //
         $fotos_eventos = DB::table('eventos')
             ->leftJoin('fotos_eventos', 'eventos.id', '=', 'eventos_id')
-            ->select('fotos_eventos.name')
+            ->select('fotos_eventos.designacao')
             ->where('eventos.id', $eventos->id)
             ->get();
 

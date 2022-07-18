@@ -12,7 +12,7 @@
                 ?>
                 <div class="row">
                     @foreach ($lista as $value)
-                        <div class="col">
+                        <div class="col-4">
                             <img src='{{ asset('storage/images/grutas') . '/' . $value }}' class='rounded img-thumbnail'
                                 alt='Preview'>
                         </div>

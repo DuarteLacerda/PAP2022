@@ -101,6 +101,9 @@
                         <a href="/profile" class="dropdown-item">
                             <i class="fas fa-user text-primary me-2"></i>Perfil
                         </a>
+                        <a href="/register" class="dropdown-item">
+                            <i class="fas fa-plus-circle text-primary me-2"></i>Criar Nova Conta
+                        </a>
                         <a href="{{ Auth::logout() }}" class="dropdown-item">
                             <i class="fas fa-power-off text-primary me-2"></i>Desconectar
                         </a>

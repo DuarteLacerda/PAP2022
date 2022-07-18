@@ -85,9 +85,6 @@
                                         </a>
                                     @endif
                                 </div>
-                                <div class="text-center mt-4 fw-light">
-                                    Não tens uma conta? <a href="/register" class="text-primary">Criar Conta</a>
-                                </div>
                             </form>
                         </div>
                     </div>

@@ -34,24 +34,14 @@
                                                         @enderror
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="imagem">Imagem</label>
                                                         <div class="user-image mb-3 text-center">
                                                             <div class="imgPreview"></div>
                                                         </div>
                                                         <div class="input-group">
-                                                            <div class="custom-file">
-                                                                <input type="file" class="custom-file-input"
-                                                                    id="images" name="imageFile[]" multiple="multiple">
-                                                                <label class="custom-file-label" for="images">Insira uma
-                                                                    imagem</label>
-                                                            </div>
-                                                            <div class="input-group-append">
-                                                                <span class="input-group-text">Upload</span>
-                                                            </div>
+                                                            <input type="file" class="form-control" id="images"
+                                                                name="imageFile[]" multiple="multiple">
+                                                            <label class="input-group-text" for="images">Upload</label>
                                                         </div>
-                                                        {{-- @error('imageFile.*')
-                                                            <p class="text-danger">Este Campo é obrigatório!</p>
-                                                        @enderror --}}
                                                     </div>
                                                     <button type="submit" class="btn btn-success me-2">Enviar</button>
                                                     <button type="button" class="btn btn-warning "
@@ -67,5 +57,4 @@
                 </div>
             </div>
         </div>
-    </div>
-@endsection
+    @endsection

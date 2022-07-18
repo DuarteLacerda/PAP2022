@@ -24,7 +24,7 @@
 
 <body>
     <header>
-        <div class="row" style="background-color: #404040; height: 56px; align-items: center;">
+        {{-- <div class="row" style="background-color: #404040; height: 56px; align-items: center;">
             <div class="col">
                 <h4><a href="mailto:nabuc.geral@gmail.com"><i class="fas fa-envelope"></i>&nbspnabuc.geral@gmail.com</a>
                 </h4>
@@ -36,7 +36,7 @@
                         Lourinha Praça D. Lourenço Vicente, n. 1, 2530-126 Lourinhã</a>
                 </h4>
             </div>
-        </div>
+        </div> --}}
         <!-- the menu starts here -->
         <div class="navbar">
 
@@ -55,8 +55,9 @@
                 <a href="/">Home</a>
                 <a href="/about">Sobre nós</a>
                 <a href="/catalogo">Catalogo</a>
+                <a href="/eventosCatalogo">Eventos/Parceres</a>
 
-                <div class="dropdown">
+                {{-- <div class="dropdown">
                     <label for="toggle-1">Eventos</label>
                     <input type="checkbox" id="toggle-1" />
                     <ul>
@@ -66,7 +67,7 @@
                         <li><a href="/eventos/proposta">Proposta "Valorização do Planalto das Cesaredas</a></li>
                         <li><a href="/eventos/congresso">I Congresso sobre o Planalto das Cesaredas</a></li>
                     </ul>
-                </div>
+                </div> --}}
 
                 <div class="dropdown">
                     <label for="toggle-2">Arqueologia</label>
@@ -111,8 +112,7 @@
                     </header>
                     <p><strong>"De uma caverna nada se tira, a não ser fotos; nada se deixa, a não ser pegadas; e
                             nada se mata, a não ser o tempo."</strong><br><br>Lema dos exploradores de cavernas</p>
-                    <h4><a href="mailto:nabuc.geral@gmail.com"><i
-                                class="fas fa-envelope"></i>nabuc.geral@gmail.com</a>
+                    <h4><a href="mailto:nabuc.geral@gmail.com"><i class="fas fa-envelope"></i>nabuc.geral@gmail.com</a>
                     </h4>
                     <h4><a
                             href="https://www.google.com/maps/place/Pra%C3%A7a+Dom+Louren%C3%A7o+Vicente+1,+2530-126+Lourinh%C3%A3/@39.2422359,-9.3130431,17z/data=!3m1!4b1!4m5!3m4!1s0xd1f37d327e72021:0x282313acc3e1770a!8m2!3d39.2422359!4d-9.3130431"><i

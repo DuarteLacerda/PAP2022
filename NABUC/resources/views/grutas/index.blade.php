@@ -33,7 +33,6 @@
                                                             <tr>
                                                                 <th>Id</th>
                                                                 <th>Nome</th>
-                                                                <th>Descrição</th>
                                                                 <th>Data publicação</th>
                                                                 <th>Última atualização</th>
                                                                 <th>Eliminar</th>
@@ -46,7 +45,6 @@
                                                                     <td><a
                                                                             href="/grutas/edit/{{ $grt->id }}">{{ $grt->name }}</a>
                                                                     </td>
-                                                                    <td style="margin: 150px">{!! $grt->desc !!}</td>
                                                                     <td>{{ $grt->created_at }}</td>
                                                                     <td>{{ $grt->updated_at }}</td>
                                                                     <td class="text-center">

@@ -44,7 +44,6 @@
                                                             <tr>
                                                                 <th>Id</th>
                                                                 <th>Nome</th>
-                                                                <th>Descrição</th>
                                                                 <th>Data publicação</th>
                                                                 <th>Última atualização</th>
                                                             </tr>
@@ -56,7 +55,6 @@
                                                                     <td><a
                                                                             href="/grutas/edit/{{ $grt->id }}">{{ $grt->name }}</a>
                                                                     </td>
-                                                                    <td>{!! $grt->desc !!}</td>
                                                                     <td>{{ $grt->created_at }}</td>
                                                                     <td>{{ $grt->updated_at }}</td>
                                                                 </tr>
@@ -79,7 +77,6 @@
                                                             <tr>
                                                                 <th>Id</th>
                                                                 <th>Nome</th>
-                                                                <th>Descrição</th>
                                                                 <th>Data publicação</th>
                                                                 <th>Última atualização</th>
                                                             </tr>
@@ -91,7 +88,6 @@
                                                                     <td><a
                                                                             href="/evento/edit/{{ $evento->id }}">{{ $evento->name }}</a>
                                                                     </td>
-                                                                    <td>{!! $evento->descricao !!}</td>
                                                                     <td>{{ $evento->created_at }}</td>
                                                                     <td>{{ $evento->updated_at }}</td>
                                                                 </tr>

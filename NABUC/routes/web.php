@@ -89,6 +89,7 @@ Route::delete('/fotos/{foto}/{name}', [App\Http\Controllers\FotoController::clas
 
 ///////////////////////////////////////////////
 
+Route::get('/eventosCatalogo', [App\Http\Controllers\EventosCatalogoController::class, 'index'])->name('eventoCatalogo');
 Route::get('/evento', [App\Http\Controllers\EventosController::class, 'index'])->middleware('auth')->name('evento');
 Route::post('/evento', [App\Http\Controllers\EventosController::class, 'store']);
 Route::get('/evento/create', [App\Http\Controllers\EventosController::class, 'create'])->middleware('auth')->name('evento.create');

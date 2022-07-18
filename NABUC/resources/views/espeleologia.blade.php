@@ -2,7 +2,6 @@
 
 @section('content')
     <div class="container">
-        <img class="logo-espel" src="images/logoHorisontal.png" alt="logo">
         <h1 class="titulo-espel">O que é a Espeleologia?</h1>
         <h2 class="desc-espel">
             Sendo uma actividade que se dedica ao estudo das cavernas, a Espeleologia não se resume aos

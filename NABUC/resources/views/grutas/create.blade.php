@@ -28,34 +28,23 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="inputDesc">Descrição</label>
-                                                        <textarea class="ckeditor form-control" id="inputDesc" name="inputDesc" rows="4" placeholder="Descrição"
-                                                            required></textarea>
+                                                        <textarea class="ckeditor form-control" id="inputDesc" name="inputDesc" rows="4" placeholder="Descrição" required></textarea>
                                                         @error('inputDesc')
                                                             <p class="text-danger">Este Campo é obrigatório!</p>
                                                         @enderror
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="imagem">Imagem</label>
                                                         <div class="user-image mb-3 text-center">
                                                             <div class="imgPreview"></div>
                                                         </div>
-                                                        <div class="input-group">
-                                                            <div class="custom-file">
-                                                                <input type="file" class="custom-file-input"
-                                                                    id="images" name="imageFile[]" multiple="multiple">
-                                                                <label class="custom-file-label" for="images">Insira uma
-                                                                    imagem</label>
-                                                            </div>
-                                                            <div class="input-group-append">
-                                                                <span class="input-group-text">Upload</span>
-                                                            </div>
+                                                        <div class="input-group mb-3">
+                                                            <input type="file" class="form-control" id="images"
+                                                                name="imageFile[]" multiple="multiple">
+                                                            <label class="input-group-text" for="images">Upload</label>
                                                         </div>
-                                                        {{-- @error('imageFile.*')
-                                                            <p class="text-danger">Este Campo é obrigatório!</p>
-                                                        @enderror --}}
                                                     </div>
                                                     <button type="submit" class="btn btn-success me-2">Enviar</button>
-                                                    <button type="button" class="btn btn-warning "
+                                                    <button type="button" class="btn btn-warning"
                                                         id="btnLimpar">Limpar</button>
                                                 </form>
                                             </div>

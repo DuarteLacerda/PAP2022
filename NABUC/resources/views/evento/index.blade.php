@@ -33,7 +33,6 @@
                                                             <tr>
                                                                 <th>Id</th>
                                                                 <th>Nome</th>
-                                                                <th>Descrição</th>
                                                                 <th>Data publicação</th>
                                                                 <th>Última atualização</th>
                                                                 <th>Eliminar</th>
@@ -46,7 +45,6 @@
                                                                     <td><a
                                                                             href="/evento/edit/{{ $evento->id }}">{{ $evento->name }}</a>
                                                                     </td>
-                                                                    <td>{!! $evento->descricao !!}</td>
                                                                     <td>{{ $evento->created_at }}</td>
                                                                     <td>{{ $evento->updated_at }}</td>
                                                                     <td class="text-center">
